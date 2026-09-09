@@ -1,10 +1,10 @@
 ﻿<?php $currentPage = basename($_SERVER['SCRIPT_NAME'] ?? 'index.php'); ?>
-<header class="main-header">
+<header class="main-header active-sticky-header">
     <div class="header-sticky">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="index.php">
-                    <img src="images/misc/logo.svg" alt="Logo">
+                    <img src="images/misc/smh-main-logo.svg" alt="SMH Logo">
                 </a>
 
                 <div class="collapse navbar-collapse main-menu">

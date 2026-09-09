@@ -12,7 +12,7 @@ $pageTitle = $pageTitle ?? 'Pluxes - Medical & Healthcare';
     <meta name="author" content="Arisetheme">
     <title><?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="images/misc/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="images/misc/smh-main-logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">

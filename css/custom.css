@@ -53,13 +53,14 @@
 /************************************/
 
 :root{
-	--primary-color				: #08363B;
-	--secondary-color			: #EDF9FC;
+	--primary-color				: #2C5EAD;
+	--secondary-color			: #C4E2F5;
 	--bg-color					: #FFFFFF;
-	--text-color				: #67787A;
-	--accent-color				: #00A8BC;
+	--text-color				: #23426c;
+	--accent-color				: #1591DC;
+	--light-accent-color		: #4BB8FA;
 	--white-color				: #FFFFFF;
-	--divider-color				: #08363B1A;
+	--divider-color				: #2C5EAD1A;
 	--dark-divider-color		: #FFFFFF1A;
 	--error-color				: rgb(230, 87, 87);
 	--default-font				: "Rethink Sans", sans-serif;
@@ -556,14 +557,28 @@ header.main-header .header-sticky.active{
 	border-radius: 0 0 20px 20px;
 }
 
+header.main-header .header-sticky.active .navbar{
+	padding: 10px 0;
+}
+
 .navbar{
 	align-items: center;
-	padding: 30px 0;
+	padding: 25px 0 10px 0;
 }
 
 .navbar-brand{
 	padding: 0;
 	margin: 0;
+	display: inline-flex;
+	align-items: center;
+}
+
+.navbar-brand img{
+	height: 75px;
+	width: auto;
+	object-fit: contain;
+	display: block;
+	filter: brightness(0) invert(1);
 }
 
 .main-menu .nav-menu-wrapper{
@@ -823,7 +838,7 @@ header.main-header .header-sticky.active{
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: linear-gradient(180deg, rgba(8, 54, 59, 0.50) 0%, transparent 12.88%), linear-gradient(270deg, transparent 37.22%, rgba(8, 54, 59, 0.63) 58.83%, rgba(8, 54, 59, 0.90) 100%);
+	background: linear-gradient(180deg, rgba(44, 94, 173, 0.58) 0%, rgba(21, 145, 220, 0.18) 24%, transparent 40%), linear-gradient(270deg, transparent 35%, rgba(44, 94, 173, 0.60) 58%, rgba(44, 94, 173, 0.90) 100%);
 	border-radius: 30px;
 	width: 100%;
 	height: 100%;
@@ -2959,8 +2974,11 @@ header.main-header .header-sticky.active{
 }
 
 .footer-logo img{
-	width: 100%;
-	max-width: 144px;
+	height: 120px;
+	width: auto;
+	object-fit: contain;
+	display: block;
+	filter: brightness(0) invert(1);
 }
 
 .footer-social-links ul{
@@ -5528,7 +5546,7 @@ header.main-header .header-sticky.active{
 	}
 
 	.navbar{
-		padding: 20px 0;
+		padding: 25px 0 10px 0;
 	}
 
 	.responsive-menu,

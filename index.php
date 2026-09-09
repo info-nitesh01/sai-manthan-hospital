@@ -13,9 +13,9 @@ include __DIR__ . '/partials/header.php';
                     <div class="hero-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <span class="section-sub-title wow fadeInUp">Better Care For Better Life.</span>
-                            <h1 class="text-anime-style-3" data-cursor="-opaque">Advanced healthcare solutions for healthier lives today</h1>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">We provide advanced healthcare solutions designed to improve the well-being of every patient. With experienced medical professionals, modern technology.</p>
+                            <span class="section-sub-title wow fadeInUp">Transforming Care, Transforming Lives.</span>
+                            <h1 class="text-anime-style-3" data-cursor="-opaque">Empowering Your Wellness Journey. Compassionate, advanced care for a vibrant life.</h1>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Your well-being is our priority. We combine compassionate care from expert professionals with advanced medical technology to deliver solutions you can trust.</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -51,8 +51,8 @@ include __DIR__ . '/partials/header.php';
 
                                 <!-- Hero Client Content Start -->
                                 <div class="hero-client-content">
-                                    <h2><span class="counter">4.9</span>/5<i class="fa fa-solid fa-star"></i></h2>
-                                    <p>More Than 2500 Reviews</p>
+                                    <h2><span class="counter">4.6</span>/5<i class="fa fa-solid fa-star"></i></h2>
+                                    <p>More Than 1500 Reviews</p>
                                 </div>
                                 <!-- Hero Client Content End -->
                             </div>
@@ -132,8 +132,8 @@ include __DIR__ . '/partials/header.php';
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <span class="section-sub-title wow fadeInUp">About Us</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">About our journey providing quality healthcare</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">We are dedicated to providing compassionate, high-quality healthcare that focuses on your overall well-being. Our experienced medical professionals technology with personalized care to ensure every patient receives.</p>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Building a Foundation of Quality Care</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Your health and well-being are at the heart of everything we do. By blending state-of-the-art technology with deeply personalized care, our experienced medical team ensures you receive the compassionate, high-quality treatment you deserve.</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -275,7 +275,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- Service Cta Box Image Start -->
                         <div class="service-cta-box-image">
                             <figure>
-                                <img src="images/about/our-service-box-image.png" alt="">
+                                <img src="images/about/our-service-box.png" alt="">
                             </figure>
                         </div>
                         <!-- Service Cta Box  Image End -->

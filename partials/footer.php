@@ -21,7 +21,7 @@
                     <div class="footer-links-box">
                         <div class="footer-header">
                             <div class="footer-logo">
-                                <img src="images/misc/logo.svg" alt="">
+                                <img src="images/misc/smh-main-logo.svg" alt="SMH Logo">
                             </div>
                             <div class="footer-social-links">
                                 <ul>
