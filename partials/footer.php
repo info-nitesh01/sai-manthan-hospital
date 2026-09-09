@@ -7,11 +7,6 @@
                             <span class="section-sub-title wow fadeInUp">Your Health Matters to Us</span>
                             <div class="lets-talk-title">
                                 <h2><a href="contact.php">Get in Touch</a></h2>
-                                <!-- <div class="years-experience-circle">
-                                    <figure>
-                                        <img src="images/brand/years-experience-circle-white.svg" alt="">
-                                    </figure>
-                                </div> -->
                             </div>
                         </div>
                     </div>
