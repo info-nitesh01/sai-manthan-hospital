@@ -1,10 +1,4 @@
-﻿/* ----------------------------------------------------------------------------------------
-* Author        : Arisetheme
-* Template Name : Pluxes - Medical & Healthcare HTML Template
-* File          : CSS File
-* Version       : 1.0
-* ---------------------------------------------------------------------------------------- */
-/* INDEX
+﻿/* INDEX
 ----------------------------------------------------------------------------------------
 01. Global Variables
 02. General css
@@ -591,6 +585,11 @@ header.main-header .header-sticky.active .navbar{
 .main-menu ul li{
 	position: relative;
 	margin: 0 10px;
+}
+
+.main-menu ul li.nav-item::before,
+.main-menu ul li.nav-item::after{
+	content: none !important;
 }
 
 .main-menu ul li a{
@@ -3119,6 +3118,7 @@ header.main-header .header-sticky.active .navbar{
 }
 
 .page-header-box ol .breadcrumb-item+.breadcrumb-item::before{
+	content: "/" !important;
     color: var(--white-color);
 }
 

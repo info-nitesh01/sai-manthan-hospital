@@ -1,5 +1,5 @@
 ﻿<?php
-$pageTitle = 'Home';
+$pageTitle = 'Sai Manthan Hospital Pratapgarh | 24/7 Multispecialty Care';
 include __DIR__ . '/partials/head.php';
 include __DIR__ . '/partials/preloader.php';
 include __DIR__ . '/partials/header.php';
@@ -14,7 +14,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <span class="section-sub-title wow fadeInUp">Transforming Care, Transforming Lives.</span>
-                            <h1 class="text-anime-style-3" data-cursor="-opaque">Empowering Your Wellness Journey. Compassionate, advanced care for a vibrant life.</h1>
+                            <h1 class="text-anime-style-3" data-cursor="-opaque">Welcome to Sai Manthan Hospital, Pratapgarh</h1>
                             <p class="wow fadeInUp" data-wow-delay="0.2s">Your well-being is our priority. We combine compassionate care from expert professionals with advanced medical technology to deliver solutions you can trust.</p>
                         </div>
                         <!-- Section Title End -->
@@ -199,7 +199,7 @@ include __DIR__ . '/partials/header.php';
                     <!-- Section Title Start -->
                     <div class="section-title section-title-center">
                         <span class="section-sub-title wow fadeInUp">Our Services</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Supporting your complete well-being with expert care.</h2>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">Comprehensive 24/7 Medical &amp; Emergency Services</h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -316,7 +316,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <span class="section-sub-title wow fadeInUp">Why Choose Us</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Care You Can Trust at Every Step</h2>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Our Specialties: Obstetrics, Orthopedics &amp; Pediatrics</h2>
                             <p class="wow fadeInUp" data-wow-delay="0.2s">From accurate diagnosis to compassionate treatment, our dedicated team combines medical expertise, modern facilities, and personalized attention to support every patient's health journey.</p>
                         </div>
                         <!-- Section Title End -->
@@ -414,7 +414,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <span class="section-sub-title wow fadeInUp">Core Feature</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Everything You Need for Better Care</h2>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Advanced Diagnostics &amp; Pathology in Bela Pratapgarh</h2>
                             <p class="wow fadeInUp" data-wow-delay="0.2s">From skilled professionals and advanced facilities to round-the-clock support, every part of our care is designed to protect your comfort, safety, and recovery.</p>
                         </div>
                         <!-- Section Title End -->
