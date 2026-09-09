@@ -3079,7 +3079,7 @@ header.main-header .header-sticky.active .navbar{
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: linear-gradient(180deg, rgba(8, 54, 59, 0.50) 0%, transparent 12.88%), linear-gradient(270deg, transparent 37.22%, rgba(8, 54, 59, 0.63) 58.83%, rgba(8, 54, 59, 0.90) 100%);
+	background: linear-gradient(180deg, rgba(44, 94, 173, 0.50) 0%, transparent 12.88%), linear-gradient(270deg, transparent 37.22%, rgba(44, 94, 173, 0.63) 58.83%, rgba(44, 94, 173, 0.90) 100%);
 	border-radius: 30px;
 	z-index: 1;
 }
