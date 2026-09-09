@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Page Not Found';
 include __DIR__ . '/partials/head.php';
 include __DIR__ . '/partials/preloader.php';
@@ -25,3 +25,4 @@ include __DIR__ . '/partials/header.php';
     </div>
 </div>
 <?php include __DIR__ . '/partials/footer.php'; ?>
+

@@ -48,7 +48,7 @@ include __DIR__ . '/partials/header.php';
                     <!-- Contact Info Item Start -->
                     <div class="contact-info-item wow fadeInUp">
                         <div class="icon-box">
-                            <img src="images/icon-headphone.svg" alt="">
+                            <img src="images/icons/icon-headphone.svg" alt="">
                         </div>
                         <div class="contact-info-item-content">
                             <p>Emergency Call</p>
@@ -60,7 +60,7 @@ include __DIR__ . '/partials/header.php';
                     <!-- Contact Info Item Start -->
                     <div class="contact-info-item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="icon-box">
-                            <img src="images/icon-mail-white.svg" alt="">
+                            <img src="images/icons/icon-mail-white.svg" alt="">
                         </div>
                         <div class="contact-info-item-content">
                             <p>E-mail Us</p>
@@ -72,7 +72,7 @@ include __DIR__ . '/partials/header.php';
                     <!-- Contact Info Item Start -->
                     <div class="contact-info-item wow fadeInUp" data-wow-delay="0.4s">
                         <div class="icon-box">
-                            <img src="images/icon-location-white.svg" alt="">
+                            <img src="images/icons/icon-location-white.svg" alt="">
                         </div>
                         <div class="contact-info-item-content">
                             <p>Our Location</p>
@@ -162,3 +162,4 @@ include __DIR__ . '/partials/header.php';
         </div>
     </div>
     <!-- Contact location Form Box End -->\n<?php include __DIR__ . '/partials/footer.php'; ?>\n
+

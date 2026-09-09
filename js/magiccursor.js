@@ -1,4 +1,4 @@
-class Cursor {
+﻿class Cursor {
     constructor(options) {
         this.options = $.extend(true, {
             container: "body",
@@ -125,3 +125,4 @@ class Cursor {
 }
 // Init cursor
 const cursor = new Cursor();
+

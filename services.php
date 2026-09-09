@@ -35,7 +35,7 @@ include __DIR__ . '/partials/header.php';
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp">
                         <div class="icon-box">
-                            <img src="images/icon-service-item-1.svg" alt="">
+                            <img src="images/icons/icon-service-item-1.svg" alt="">
                         </div>
                         <div class="service-item-body">
                             <div class="service-item-content">
@@ -54,7 +54,7 @@ include __DIR__ . '/partials/header.php';
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="icon-box">
-                            <img src="images/icon-service-item-2.svg" alt="">
+                            <img src="images/icons/icon-service-item-2.svg" alt="">
                         </div>
                         <div class="service-item-body">
                             <div class="service-item-content">
@@ -73,7 +73,7 @@ include __DIR__ . '/partials/header.php';
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
                         <div class="icon-box">
-                            <img src="images/icon-service-item-3.svg" alt="">
+                            <img src="images/icons/icon-service-item-3.svg" alt="">
                         </div>
                         <div class="service-item-body">
                             <div class="service-item-content">
@@ -92,7 +92,7 @@ include __DIR__ . '/partials/header.php';
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="0.6s">
                         <div class="icon-box">
-                            <img src="images/icon-service-item-4.svg" alt="">
+                            <img src="images/icons/icon-service-item-4.svg" alt="">
                         </div>
                         <div class="service-item-body">
                             <div class="service-item-content">
@@ -111,7 +111,7 @@ include __DIR__ . '/partials/header.php';
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="0.8s">
                         <div class="icon-box">
-                            <img src="images/icon-service-item-5.svg" alt="">
+                            <img src="images/icons/icon-service-item-5.svg" alt="">
                         </div>
                         <div class="service-item-body">
                             <div class="service-item-content">
@@ -130,7 +130,7 @@ include __DIR__ . '/partials/header.php';
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="1s">
                         <div class="icon-box">
-                            <img src="images/icon-service-item-6.svg" alt="">
+                            <img src="images/icons/icon-service-item-6.svg" alt="">
                         </div>
                         <div class="service-item-body">
                             <div class="service-item-content">
@@ -149,7 +149,7 @@ include __DIR__ . '/partials/header.php';
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="1.2s">
                         <div class="icon-box">
-                            <img src="images/icon-service-item-7.svg" alt="">
+                            <img src="images/icons/icon-service-item-7.svg" alt="">
                         </div>
                         <div class="service-item-body">
                             <div class="service-item-content">
@@ -168,7 +168,7 @@ include __DIR__ . '/partials/header.php';
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="1.4s">
                         <div class="icon-box">
-                            <img src="images/icon-service-item-8.svg" alt="">
+                            <img src="images/icons/icon-service-item-8.svg" alt="">
                         </div>
                         <div class="service-item-body">
                             <div class="service-item-content">
@@ -213,7 +213,7 @@ include __DIR__ . '/partials/header.php';
                                 </ul>
                             </div>
                             <div class="icon-box">
-                                <img src="images/icon-fact-item-1.svg" alt="">
+                                <img src="images/icons/icon-fact-item-1.svg" alt="">
                             </div>
                         </div>
                         <div class="fact-item-content">
@@ -234,7 +234,7 @@ include __DIR__ . '/partials/header.php';
                                 </ul>
                             </div>
                             <div class="icon-box">
-                                <img src="images/icon-fact-item-2.svg" alt="">
+                                <img src="images/icons/icon-fact-item-2.svg" alt="">
                             </div>
                         </div>
                         <div class="fact-item-content">
@@ -255,7 +255,7 @@ include __DIR__ . '/partials/header.php';
                                 </ul>
                             </div>
                             <div class="icon-box">
-                                <img src="images/icon-fact-item-3.svg" alt="">
+                                <img src="images/icons/icon-fact-item-3.svg" alt="">
                             </div>
                         </div>
                         <div class="fact-item-content">
@@ -328,7 +328,7 @@ include __DIR__ . '/partials/header.php';
                                 <!-- Why Choose Counter Image Start -->
                                 <div class="why-choose-counter-image">
                                     <figure class="image-anime">
-                                        <img src="images/why-choose-counter-image.jpg" alt="">
+                                        <img src="images/services/why-choose-counter-image.jpg" alt="">
                                     </figure>
                                 </div>
                                 <!-- Why Choose Counter Image End -->
@@ -338,7 +338,7 @@ include __DIR__ . '/partials/header.php';
                             <!-- Why Choose Body Image Start -->
                             <div class="why-choose-body-image">
                                 <figure class="image-anime reveal">
-                                    <img src="images/why-choose-body-image.jpg" alt="">
+                                    <img src="images/misc/why-choose-body-image.jpg" alt="">
                                 </figure>
                             </div>
                             <!-- Why Choose Body Image End -->
@@ -354,7 +354,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- Why Choose Experience Circle Start -->
                         <div class="years-experience-circle">
                             <figure>
-                                <img src="images/years-experience-circle-white.svg" alt="">
+                                <img src="images/brand/years-experience-circle-white.svg" alt="">
                             </figure>
                         </div>
                         <!-- Why Choose Experience Circle End -->
@@ -362,7 +362,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- Why Choose Us Image Start -->
                         <div class="why-choose-us-image">
                             <figure>
-                                <img src="images/why-choose-us-image.png" alt="">
+                                <img src="images/services/why-choose-us-image.png" alt="">
                             </figure>
                         </div>
                         <!-- Why Choose Us Image End -->
@@ -370,7 +370,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- Why Choose Cta Box Start -->
                         <div class="why-choose-cta-box">
                             <div class="icon-box">
-                                <img src="images/icon-why-choose-cta-box.svg" alt="">
+                                <img src="images/icons/icon-why-choose-cta-box.svg" alt="">
                             </div>
                             <div class="why-choose-cta-content">
                                 <h2><span class="counter">12</span>+</h2>
@@ -410,17 +410,17 @@ include __DIR__ . '/partials/header.php';
                             <div class="satisfy-client-images">
                                 <div class="satisfy-client-image">
                                     <figure class="image-anime">
-                                        <img src="images/author-1.jpg" alt="">
+                                        <img src="images/people/author-1.jpg" alt="">
                                     </figure>
                                 </div>
                                 <div class="satisfy-client-image">
                                     <figure class="image-anime">
-                                        <img src="images/author-2.jpg" alt="">
+                                        <img src="images/people/author-2.jpg" alt="">
                                     </figure>
                                 </div>
                                 <div class="satisfy-client-image">
                                     <figure class="image-anime">
-                                        <img src="images/author-3.jpg" alt="">
+                                        <img src="images/people/author-3.jpg" alt="">
                                     </figure>
                                 </div>
                             </div>
@@ -451,7 +451,7 @@ include __DIR__ . '/partials/header.php';
                     <!-- Approach Item Start -->
                     <div class="approach-item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="icon-box">
-                            <img src="images/icon-approach-item-1.svg" alt="">
+                            <img src="images/icons/icon-approach-item-1.svg" alt="">
                         </div>
                         <div class="approach-item-content">
                             <h3>Your Health Our Priority</h3>
@@ -465,7 +465,7 @@ include __DIR__ . '/partials/header.php';
                     <!-- Approach Item Start -->
                     <div class="approach-item wow fadeInUp" data-wow-delay="0.4s">
                         <div class="icon-box">
-                            <img src="images/icon-approach-item-2.svg" alt="">
+                            <img src="images/icons/icon-approach-item-2.svg" alt="">
                         </div>
                         <div class="approach-item-content">
                             <h3>Vision For Better Healthcare</h3>
@@ -509,7 +509,7 @@ include __DIR__ . '/partials/header.php';
                         <div class="expertise-image-box-1">
                             <div class="expertise-image">
                                 <figure class="image-anime">
-                                    <img src="images/our-expertise-image-1.jpg" alt="">
+                                    <img src="images/backgrounds/our-expertise-image-1.jpg" alt="">
                                 </figure>
                             </div>
                         </div>
@@ -519,12 +519,12 @@ include __DIR__ . '/partials/header.php';
                         <div class="expertise-image-box-2">
                             <div class="expertise-experience-circle">
                                 <figure>
-                                    <img src="images/experience-circle-accent.svg" alt="">
+                                    <img src="images/brand/experience-circle-accent.svg" alt="">
                                 </figure>
                             </div>
                             <div class="expertise-image">
                                 <figure class="image-anime">
-                                    <img src="images/our-expertise-image-2.jpg" alt="">
+                                    <img src="images/backgrounds/our-expertise-image-2.jpg" alt="">
                                 </figure>
                             </div>
                         </div>
@@ -582,7 +582,7 @@ include __DIR__ . '/partials/header.php';
                             <!-- What We Contact Item Start -->
                             <div class="what-we-contact-item">
                                 <div class="icon-box">
-                                    <img src="images/icon-headphone.svg" alt="">
+                                    <img src="images/icons/icon-headphone.svg" alt="">
                                 </div>
                                 <div class="what-we-contact-item-content">
                                     <p>Emergency Call</p>
@@ -627,7 +627,7 @@ include __DIR__ . '/partials/header.php';
                                     <div class="testimonial-item">
                                         <div class="testimonial-item-header">
                                             <div class="testimonial-item-quote">
-                                                <img src="images/testimonial-quote.svg" alt="">
+                                                <img src="images/brand/testimonial-quote.svg" alt="">
                                             </div>
                                             <div class="testimonial-item-content">
                                                 <p>“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”</p>
@@ -636,7 +636,7 @@ include __DIR__ . '/partials/header.php';
                                         <div class="testimonial-item-author">
                                             <div class="testimonial-author-image">
                                                 <figure class="image-anime">
-                                                    <img src="images/author-1.jpg" alt="">
+                                                    <img src="images/people/author-1.jpg" alt="">
                                                 </figure>
                                             </div>
                                             <div class="testimonial-author-content">
@@ -655,7 +655,7 @@ include __DIR__ . '/partials/header.php';
                                     <div class="testimonial-item">
                                         <div class="testimonial-item-header">
                                             <div class="testimonial-item-quote">
-                                                <img src="images/testimonial-quote.svg" alt="">
+                                                <img src="images/brand/testimonial-quote.svg" alt="">
                                             </div>
                                             <div class="testimonial-item-content">
                                                 <p>“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”</p>
@@ -664,7 +664,7 @@ include __DIR__ . '/partials/header.php';
                                         <div class="testimonial-item-author">
                                             <div class="testimonial-author-image">
                                                 <figure class="image-anime">
-                                                    <img src="images/author-5.jpg" alt="">
+                                                    <img src="images/people/author-5.jpg" alt="">
                                                 </figure>
                                             </div>
                                             <div class="testimonial-author-content">
@@ -683,7 +683,7 @@ include __DIR__ . '/partials/header.php';
                                     <div class="testimonial-item">
                                         <div class="testimonial-item-header">
                                             <div class="testimonial-item-quote">
-                                                <img src="images/testimonial-quote.svg" alt="">
+                                                <img src="images/brand/testimonial-quote.svg" alt="">
                                             </div>
                                             <div class="testimonial-item-content">
                                                 <p>“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”</p>
@@ -692,7 +692,7 @@ include __DIR__ . '/partials/header.php';
                                         <div class="testimonial-item-author">
                                             <div class="testimonial-author-image">
                                                 <figure class="image-anime">
-                                                    <img src="images/author-3.jpg" alt="">
+                                                    <img src="images/people/author-3.jpg" alt="">
                                                 </figure>
                                             </div>
                                             <div class="testimonial-author-content">
@@ -711,7 +711,7 @@ include __DIR__ . '/partials/header.php';
                                     <div class="testimonial-item">
                                         <div class="testimonial-item-header">
                                             <div class="testimonial-item-quote">
-                                                <img src="images/testimonial-quote.svg" alt="">
+                                                <img src="images/brand/testimonial-quote.svg" alt="">
                                             </div>
                                             <div class="testimonial-item-content">
                                                 <p>“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”</p>
@@ -720,7 +720,7 @@ include __DIR__ . '/partials/header.php';
                                         <div class="testimonial-item-author">
                                             <div class="testimonial-author-image">
                                                 <figure class="image-anime">
-                                                    <img src="images/author-4.jpg" alt="">
+                                                    <img src="images/people/author-4.jpg" alt="">
                                                 </figure>
                                             </div>
                                             <div class="testimonial-author-content">
@@ -745,11 +745,11 @@ include __DIR__ . '/partials/header.php';
                         <div class="satisfy-client-images">
                             <div class="satisfy-client-image">
                                 <figure class="image-anime">
-                                    <img src="images/author-1.jpg" alt="">
+                                    <img src="images/people/author-1.jpg" alt="">
                                 </figure>
                             </div>
                             <div class="satisfy-client-image add-more">
-                                <img src="images/icon-phone-white.svg" alt="">
+                                <img src="images/icons/icon-phone-white.svg" alt="">
                             </div>
                         </div>
                         <!-- Satisfy Client Images End -->    
@@ -772,7 +772,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- FAQ CTA Image Start -->
                         <div class="faq-cta-image">
                             <figure class="image-anime reveal">
-                                <img src="images/faq-cta-image.jpg" alt="">
+                                <img src="images/misc/faq-cta-image.jpg" alt="">
                             </figure>
                         </div>
                         <!-- FAQ CTA Image End -->
@@ -888,3 +888,4 @@ include __DIR__ . '/partials/header.php';
         </div>
     </div>
     <!-- Our FAQs Section End -->\n<?php include __DIR__ . '/partials/footer.php'; ?>\n
+

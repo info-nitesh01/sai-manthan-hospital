@@ -37,7 +37,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- Team Single Image Start -->
                         <div class="team-single-image">
                             <figure class="image-anime reveal">
-                                <img src="images/team-1.jpg" alt="">
+                                <img src="images/people/team-1.jpg" alt="">
                             </figure>
                         </div>
                         <!-- Team Single Image End -->
@@ -53,7 +53,7 @@ include __DIR__ . '/partials/header.php';
                                 <!-- Team Sidebar CTA Item Start -->
                                 <div class="team-sidebar-cta-item">
                                     <div class="icon-box">
-                                        <img src="images/icon-headphone.svg" alt="">
+                                        <img src="images/icons/icon-headphone.svg" alt="">
                                     </div>
                                     <div class="team-sidebar-cta-item-content">
                                         <p>Call Us!</p>
@@ -65,7 +65,7 @@ include __DIR__ . '/partials/header.php';
                                 <!-- Team Sidebar CTA Item Start -->
                                 <div class="team-sidebar-cta-item">
                                     <div class="icon-box">
-                                        <img src="images/icon-mail-white.svg" alt="">
+                                        <img src="images/icons/icon-mail-white.svg" alt="">
                                     </div>
                                     <div class="team-sidebar-cta-item-content">
                                         <p>E-mail Us!</p>
@@ -77,7 +77,7 @@ include __DIR__ . '/partials/header.php';
                                 <!-- Team Sidebar CTA Item Start -->
                                 <div class="team-sidebar-cta-item">
                                     <div class="icon-box">
-                                        <img src="images/icon-position.svg" alt="">
+                                        <img src="images/icons/icon-position.svg" alt="">
                                     </div>
                                     <div class="team-sidebar-cta-item-content">
                                         <p>Position:</p>
@@ -89,7 +89,7 @@ include __DIR__ . '/partials/header.php';
                                 <!-- Team Sidebar CTA Item Start -->
                                 <div class="team-sidebar-cta-item">
                                     <div class="icon-box">
-                                        <img src="images/icon-location-white.svg" alt="">
+                                        <img src="images/icons/icon-location-white.svg" alt="">
                                     </div>
                                     <div class="team-sidebar-cta-item-content">
                                         <p>Location:</p>
@@ -157,7 +157,7 @@ include __DIR__ . '/partials/header.php';
                                 <!-- Member Education Item Start -->
                                 <div class="member-education-item wow fadeInUp" data-wow-delay="0.2s">
                                     <div class="icon-box">
-                                        <img src="images/icon-member-education-1.svg" alt="">
+                                        <img src="images/icons/icon-member-education-1.svg" alt="">
                                     </div>
                                     <div class="member-education-item-content">
                                         <h3>Doctor of Medicine (MD)</h3>
@@ -169,7 +169,7 @@ include __DIR__ . '/partials/header.php';
                                 <!-- Member Education Item Start -->
                                 <div class="member-education-item wow fadeInUp" data-wow-delay="0.4s">
                                     <div class="icon-box">
-                                        <img src="images/icon-member-education-2.svg" alt="">
+                                        <img src="images/icons/icon-member-education-2.svg" alt="">
                                     </div>
                                     <div class="member-education-item-content">
                                         <h3>Board Certified In Family Medicine</h3>
@@ -312,3 +312,4 @@ include __DIR__ . '/partials/header.php';
         </div>
     </div>
     <!-- Page Team Single End -->\n<?php include __DIR__ . '/partials/footer.php'; ?>\n
+

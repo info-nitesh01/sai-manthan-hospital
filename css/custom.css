@@ -1,4 +1,4 @@
-/* ----------------------------------------------------------------------------------------
+﻿/* ----------------------------------------------------------------------------------------
 * Author        : Arisetheme
 * Template Name : Pluxes - Medical & Healthcare HTML Template
 * File          : CSS File
@@ -243,7 +243,7 @@ a:focus{
     right: 20px;
     width: 20px;
     height: 20px;
-    background-image: url('../images/arrow-white.svg');
+    background-image: url('../images/brand/arrow-white.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -291,7 +291,7 @@ a:focus{
 }
 
 .btn-default.btn-highlighted:hover:before{
-	background-image: url('../images/arrow-primary.svg');
+	background-image: url('../images/brand/arrow-primary.svg');
 }
 
 .btn-default.btn-highlighted::after,
@@ -317,7 +317,7 @@ a:focus{
 	width: 18px;
 	height: 18px;
 	transform: translateY(-50%);
-	background-image: url('../images/arrow-primary.svg');
+	background-image: url('../images/brand/arrow-primary.svg');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -400,7 +400,7 @@ a:focus{
 
 .dark-section{
 	background-color: var(--primary-color);
-	background-image: url('../images/dark-section-bg-image.png');
+	background-image: url('../images/misc/dark-section-bg-image.png');
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: cover;
@@ -803,7 +803,7 @@ header.main-header .header-sticky.active{
 
 .hero{
 	position: relative;
-	background-image: url('../images/hero-bg-image.jpg');
+	background-image: url('../images/misc/hero-bg-image.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -1386,8 +1386,8 @@ header.main-header .header-sticky.active{
 
 .why-choose-counter-image figure{
 	display: block;
-	background-image: url('../images/why-choose-counter-image-shape.svg');
-	mask-image: url('../images/why-choose-counter-image-shape.svg');
+	background-image: url('../images/services/why-choose-counter-image-shape.svg');
+	mask-image: url('../images/services/why-choose-counter-image-shape.svg');
     mask-size: cover;
     mask-position: center center;
     mask-repeat: no-repeat;
@@ -2564,7 +2564,7 @@ header.main-header .header-sticky.active{
 /************************************/
 
 .our-testimonial{
-	background-image: url('../images/section-bg-image-1.png');
+	background-image: url('../images/misc/section-bg-image-1.png');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 100% auto;
@@ -3047,7 +3047,7 @@ header.main-header .header-sticky.active{
 
 .page-header{
 	position: relative;
-	background-image: url('../images/page-header-bg.jpg');
+	background-image: url('../images/misc/page-header-bg.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -3358,8 +3358,8 @@ header.main-header .header-sticky.active{
 	position: relative;
 	display: block;
 	border-radius: 20px;
-	background-image: url('../images/what-we-do-image-bg-shape.svg');
-	mask-image: url('../images/what-we-do-image-bg-shape.svg');
+	background-image: url('../images/backgrounds/what-we-do-image-bg-shape.svg');
+	mask-image: url('../images/backgrounds/what-we-do-image-bg-shape.svg');
 	mask-repeat: no-repeat;
 	mask-position: center center;
 	mask-size: cover;
@@ -3641,7 +3641,7 @@ header.main-header .header-sticky.active{
     top: 50%;
     right: 0;
 	transform: translateY(-50%);
-	background: url('../images/arrow-primary.svg') no-repeat;
+	background: url('../images/brand/arrow-primary.svg') no-repeat;
 	background-position: center center;
 	background-size: cover;
     width: 18px;
@@ -4199,7 +4199,7 @@ header.main-header .header-sticky.active{
 }
 
 .post-entry blockquote{
-	background: var(--secondary-color) url('../images/icon-blockquote.svg');
+	background: var(--secondary-color) url('../images/icons/icon-blockquote.svg');
 	background-repeat: no-repeat;
 	background-position: 30px 30px;
     background-size: 45px;
@@ -7129,7 +7129,7 @@ header.main-header .header-sticky.active{
 
 .hero-prime{
 	position: relative;
-	background-image: url('../images/hero-bg-image-prime.jpg');
+	background-image: url('../images/misc/hero-bg-image-prime.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-radius: 30px;
@@ -7244,7 +7244,7 @@ header.main-header .header-sticky.active{
 }
 
 .about-us-image-box-prime{
-	background: url('../images/about-image-box-bg-prime.png');
+	background: url('../images/backgrounds/about-image-box-bg-prime.png');
 	background-repeat: no-repeat;
 	background-position: top 235px left 118px;
 	background-size: auto;
@@ -7435,7 +7435,7 @@ header.main-header .header-sticky.active{
 }
 
 .our-services-prime{
-	background-image: url('../images/section-bg-image-2.png');
+	background-image: url('../images/misc/section-bg-image-2.png');
 	background-position: bottom -40px left;
 	background-repeat: no-repeat;
 	background-size: auto;
@@ -7998,7 +7998,7 @@ header.main-header .header-sticky.active{
 }
 
 .how-it-work-prime{
-	background-image: url('../images/section-bg-image-3.png');
+	background-image: url('../images/misc/section-bg-image-3.png');
 	background-position: bottom -40px right;
 	background-repeat: no-repeat;
 	background-size: auto;
@@ -8532,7 +8532,7 @@ header.main-header .header-sticky.active{
 
 .our-faqs-prime{
 	position: relative;
-	background: url('../images/faqs-bg-image-prime.jpg');
+	background: url('../images/misc/faqs-bg-image-prime.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -8759,7 +8759,7 @@ header.main-header .header-sticky.active{
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	background-image: url('../images/footer-contact-item-list-bg-image-prime.jpg');
+	background-image: url('../images/misc/footer-contact-item-list-bg-image-prime.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -9816,8 +9816,8 @@ header.main-header .header-sticky.active{
 	position: absolute;
 	width: 30px;
 	height: 30px;
-	mask: url('../images/about-image-corner-bg-shape-royal.svg');
-	-webkit-mask: url('../images/about-image-corner-bg-shape-royal.svg');
+	mask: url('../images/backgrounds/about-image-corner-bg-shape-royal.svg');
+	-webkit-mask: url('../images/backgrounds/about-image-corner-bg-shape-royal.svg');
 	background-color: var(--bg-color);
 	mask-repeat: no-repeat;
 	mask-size: cover;
@@ -10792,7 +10792,7 @@ header.main-header .header-sticky.active{
 
 .our-faq-royal{
 	position: relative;
-	background: url("../images/faqs-bg-image-royal.jpg");
+	background: url("../images/misc/faqs-bg-image-royal.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -11880,3 +11880,4 @@ header.main-header .header-sticky.active{
 		height: 36px;
 	}
 }
+

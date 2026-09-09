@@ -1,4 +1,4 @@
-//
+﻿//
 // SmoothScroll for websites v1.5.1 (Balazs Galambosi)
 // http://www.smoothscroll.net/
 //
@@ -813,3 +813,4 @@ else
     window.SmoothScroll = SmoothScroll;
 
 })();
+

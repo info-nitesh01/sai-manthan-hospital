@@ -36,14 +36,14 @@ include __DIR__ . '/partials/header.php';
                         <div class="team-item-image">
                             <a href="team-single.php" data-cursor-text="View">
                                 <figure>
-                                    <img src="images/team-1.jpg" alt="">
+                                    <img src="images/people/team-1.jpg" alt="">
                                 </figure>
                             </a>
                         </div>
                         <div class="team-item-body">
                             <div class="team-social-list-box">
                                 <div class="team-social-btn">
-                                    <a href="team-single.php"><img src="images/icon-share.svg" alt=""></a>
+                                    <a href="team-single.php"><img src="images/icons/icon-share.svg" alt=""></a>
                                 </div> 
                                 <div class="team-social-list">
                                     <ul>
@@ -69,14 +69,14 @@ include __DIR__ . '/partials/header.php';
                         <div class="team-item-image">
                             <a href="team-single.php" data-cursor-text="View">
                                 <figure>
-                                    <img src="images/team-2.jpg" alt="">
+                                    <img src="images/people/team-2.jpg" alt="">
                                 </figure>
                             </a>
                         </div>
                         <div class="team-item-body">
                             <div class="team-social-list-box">
                                 <div class="team-social-btn">
-                                    <a href="team-single.php"><img src="images/icon-share.svg" alt=""></a>
+                                    <a href="team-single.php"><img src="images/icons/icon-share.svg" alt=""></a>
                                 </div> 
                                 <div class="team-social-list">
                                     <ul>
@@ -102,14 +102,14 @@ include __DIR__ . '/partials/header.php';
                         <div class="team-item-image">
                             <a href="team-single.php" data-cursor-text="View">
                                 <figure>
-                                    <img src="images/team-3.jpg" alt="">
+                                    <img src="images/people/team-3.jpg" alt="">
                                 </figure>
                             </a>
                         </div>
                         <div class="team-item-body">
                             <div class="team-social-list-box">
                                 <div class="team-social-btn">
-                                    <a href="team-single.php"><img src="images/icon-share.svg" alt=""></a>
+                                    <a href="team-single.php"><img src="images/icons/icon-share.svg" alt=""></a>
                                 </div> 
                                 <div class="team-social-list">
                                     <ul>
@@ -135,14 +135,14 @@ include __DIR__ . '/partials/header.php';
                         <div class="team-item-image">
                             <a href="team-single.php" data-cursor-text="View">
                                 <figure>
-                                    <img src="images/team-4.jpg" alt="">
+                                    <img src="images/people/team-4.jpg" alt="">
                                 </figure>
                             </a>
                         </div>
                         <div class="team-item-body">
                             <div class="team-social-list-box">
                                 <div class="team-social-btn">
-                                    <a href="team-single.php"><img src="images/icon-share.svg" alt=""></a>
+                                    <a href="team-single.php"><img src="images/icons/icon-share.svg" alt=""></a>
                                 </div> 
                                 <div class="team-social-list">
                                     <ul>
@@ -168,14 +168,14 @@ include __DIR__ . '/partials/header.php';
                         <div class="team-item-image">
                             <a href="team-single.php" data-cursor-text="View">
                                 <figure>
-                                    <img src="images/team-5.jpg" alt="">
+                                    <img src="images/people/team-5.jpg" alt="">
                                 </figure>
                             </a>
                         </div>
                         <div class="team-item-body">
                             <div class="team-social-list-box">
                                 <div class="team-social-btn">
-                                    <a href="team-single.php"><img src="images/icon-share.svg" alt=""></a>
+                                    <a href="team-single.php"><img src="images/icons/icon-share.svg" alt=""></a>
                                 </div> 
                                 <div class="team-social-list">
                                     <ul>
@@ -201,14 +201,14 @@ include __DIR__ . '/partials/header.php';
                         <div class="team-item-image">
                             <a href="team-single.php" data-cursor-text="View">
                                 <figure>
-                                    <img src="images/team-6.jpg" alt="">
+                                    <img src="images/people/team-6.jpg" alt="">
                                 </figure>
                             </a>
                         </div>
                         <div class="team-item-body">
                             <div class="team-social-list-box">
                                 <div class="team-social-btn">
-                                    <a href="team-single.php"><img src="images/icon-share.svg" alt=""></a>
+                                    <a href="team-single.php"><img src="images/icons/icon-share.svg" alt=""></a>
                                 </div> 
                                 <div class="team-social-list">
                                     <ul>
@@ -233,4 +233,6 @@ include __DIR__ . '/partials/header.php';
     <!-- Page Team End -->
 
 <?php include __DIR__ . '/partials/footer.php'; ?>
+
+
 

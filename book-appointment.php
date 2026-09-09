@@ -137,7 +137,7 @@ include __DIR__ . '/partials/header.php';
                                 </ul>
                             </div>
                             <div class="icon-box">
-                                <img src="images/icon-fact-item-1.svg" alt="">
+                                <img src="images/icons/icon-fact-item-1.svg" alt="">
                             </div>
                         </div>
                         <div class="fact-item-content">
@@ -158,7 +158,7 @@ include __DIR__ . '/partials/header.php';
                                 </ul>
                             </div>
                             <div class="icon-box">
-                                <img src="images/icon-fact-item-2.svg" alt="">
+                                <img src="images/icons/icon-fact-item-2.svg" alt="">
                             </div>
                         </div>
                         <div class="fact-item-content">
@@ -179,7 +179,7 @@ include __DIR__ . '/partials/header.php';
                                 </ul>
                             </div>
                             <div class="icon-box">
-                                <img src="images/icon-fact-item-3.svg" alt="">
+                                <img src="images/icons/icon-fact-item-3.svg" alt="">
                             </div>
                         </div>
                         <div class="fact-item-content">
@@ -271,7 +271,7 @@ include __DIR__ . '/partials/header.php';
                             <!-- Support Video Image Start -->
                             <div class="support-video-image">
                                 <figure>
-                                    <img src="images/support-video-image.jpg" alt="">
+                                    <img src="images/misc/support-video-image.jpg" alt="">
                                 </figure>
                             </div>
                             <!-- Support Video Image End -->
@@ -342,7 +342,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- Core Features Item Start -->
                         <div class="core-features-item wow fadeInUp">
                             <div class="icon-box">
-                                <img src="images/icon-core-features-item-1.svg" alt="">
+                                <img src="images/icons/icon-core-features-item-1.svg" alt="">
                             </div>
                             <div class="core-features-item-content">
                                 <h3>Quality Medical Treatment</h3>
@@ -353,7 +353,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- Core Features Item Start -->
                         <div class="core-features-item wow fadeInUp" data-wow-delay="0.2s">
                             <div class="icon-box">
-                                <img src="images/icon-core-features-item-2.svg" alt="">
+                                <img src="images/icons/icon-core-features-item-2.svg" alt="">
                             </div>
                             <div class="core-features-item-content">
                                 <h3>Personalized Patient Care</h3>
@@ -364,7 +364,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- Core Features Item Start -->
                         <div class="core-features-item wow fadeInUp" data-wow-delay="0.4s">
                             <div class="icon-box">
-                                <img src="images/icon-core-features-item-3.svg" alt="">
+                                <img src="images/icons/icon-core-features-item-3.svg" alt="">
                             </div>
                             <div class="core-features-item-content">
                                 <h3>Modern Medical Facilities</h3>
@@ -375,7 +375,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- Core Features Item Start -->
                         <div class="core-features-item wow fadeInUp" data-wow-delay="0.6s">
                             <div class="icon-box">
-                                <img src="images/icon-core-features-item-4.svg" alt="">
+                                <img src="images/icons/icon-core-features-item-4.svg" alt="">
                             </div>
                             <div class="core-features-item-content">
                                 <h3>24/7 Emergency Support</h3>
@@ -386,7 +386,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- Core Features Item Start -->
                         <div class="core-features-item wow fadeInUp" data-wow-delay="0.8s">
                             <div class="icon-box">
-                                <img src="images/icon-core-features-item-5.svg" alt="">
+                                <img src="images/icons/icon-core-features-item-5.svg" alt="">
                             </div>
                             <div class="core-features-item-content">
                                 <h3>Fast and Accurate Test Results</h3>
@@ -397,7 +397,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- Core Features Item Start -->
                         <div class="core-features-item wow fadeInUp" data-wow-delay="1s">
                             <div class="icon-box">
-                                <img src="images/icon-core-features-item-6.svg" alt="">
+                                <img src="images/icons/icon-core-features-item-6.svg" alt="">
                             </div>
                             <div class="core-features-item-content">
                                 <h3>Safe and Comfortable Environment</h3>
@@ -408,7 +408,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- Core Features Item Start -->
                         <div class="core-features-item wow fadeInUp" data-wow-delay="1.2s">
                             <div class="icon-box">
-                                <img src="images/icon-core-features-item-7.svg" alt="">
+                                <img src="images/icons/icon-core-features-item-7.svg" alt="">
                             </div>
                             <div class="core-features-item-content">
                                 <h3>Experienced Medical Professionals</h3>
@@ -419,7 +419,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- Core Features Item Start -->
                         <div class="core-features-item wow fadeInUp" data-wow-delay="1.4s">
                             <div class="icon-box">
-                                <img src="images/icon-core-features-item-8.svg" alt="">
+                                <img src="images/icons/icon-core-features-item-8.svg" alt="">
                             </div>
                             <div class="core-features-item-content">
                                 <h3>Advanced Diagnostic Technology</h3>
@@ -444,7 +444,7 @@ include __DIR__ . '/partials/header.php';
                         <!-- FAQ CTA Image Start -->
                         <div class="faq-cta-image">
                             <figure class="image-anime reveal">
-                                <img src="images/faq-cta-image.jpg" alt="">
+                                <img src="images/misc/faq-cta-image.jpg" alt="">
                             </figure>
                         </div>
                         <!-- FAQ CTA Image End -->
@@ -560,3 +560,4 @@ include __DIR__ . '/partials/header.php';
         </div>
     </div>
     <!-- Our FAQs Section End -->\n<?php include __DIR__ . '/partials/footer.php'; ?>\n
+

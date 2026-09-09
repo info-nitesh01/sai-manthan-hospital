@@ -1,10 +1,10 @@
-<?php $currentPage = basename($_SERVER['SCRIPT_NAME'] ?? 'index.php'); ?>
+﻿<?php $currentPage = basename($_SERVER['SCRIPT_NAME'] ?? 'index.php'); ?>
 <header class="main-header">
     <div class="header-sticky">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="index.php">
-                    <img src="images/logo.svg" alt="Logo">
+                    <img src="images/misc/logo.svg" alt="Logo">
                 </a>
 
                 <div class="collapse navbar-collapse main-menu">
@@ -31,3 +31,5 @@
         <div class="responsive-menu"></div>
     </div>
 </header>
+
+

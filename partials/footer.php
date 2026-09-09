@@ -1,4 +1,4 @@
-    <div class="main-footer bg-section dark-section">
+﻿    <div class="main-footer bg-section dark-section">
         <div class="container">
             <div class="row">
                 <div class="col-xl-5">
@@ -9,7 +9,7 @@
                                 <h2><a href="contact.html">Let's Talk</a></h2>
                                 <div class="years-experience-circle">
                                     <figure>
-                                        <img src="images/years-experience-circle-accent.svg" alt="">
+                                        <img src="images/brand/years-experience-circle-accent.svg" alt="">
                                     </figure>
                                 </div>
                             </div>
@@ -21,7 +21,7 @@
                     <div class="footer-links-box">
                         <div class="footer-header">
                             <div class="footer-logo">
-                                <img src="images/logo.svg" alt="">
+                                <img src="images/misc/logo.svg" alt="">
                             </div>
                             <div class="footer-social-links">
                                 <ul>
@@ -71,7 +71,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="footer-copyright-text">
-                            <p>Copyright © 2026 All Rights Reserved.</p>
+                            <p>Copyright Â© 2026 All Rights Reserved.</p>
                         </div>
                     </div>
                 </div>
@@ -99,3 +99,5 @@
     <script src="js/function.js"></script>
 </body>
 </html>
+
+

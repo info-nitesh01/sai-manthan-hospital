@@ -1,4 +1,4 @@
-/*! Copyright (c) 2016 THE ULTRASOFT (http://theultrasoft.com)
+﻿/*! Copyright (c) 2016 THE ULTRASOFT (http://theultrasoft.com)
  * Licensed under the MIT License (LICENSE.txt).
  *
  * Project: Parallaxie
@@ -53,3 +53,4 @@
         return this;
     };
 }( jQuery ));
+
