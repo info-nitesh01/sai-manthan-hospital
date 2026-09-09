@@ -15,7 +15,6 @@
                             <li class="nav-item<?php echo $currentPage === 'services.php' ? ' active' : ''; ?>"><a class="nav-link" href="services.php">Services</a></li>
                             <li class="nav-item<?php echo $currentPage === 'contact.php' ? ' active' : ''; ?>"><a class="nav-link" href="contact.php">Contact Us</a></li>
                             <li class="nav-item<?php echo $currentPage === 'team.php' ? ' active' : ''; ?>"><a class="nav-link" href="team.php">Our Team</a></li>
-                            <li class="nav-item<?php echo $currentPage === 'faqs.php' ? ' active' : ''; ?>"><a class="nav-link" href="faqs.php">FAQs</a></li>
                             <li class="nav-item highlighted-menu<?php echo $currentPage === 'book-appointment.php' ? ' active' : ''; ?>"><a class="nav-link" href="book-appointment.php">Book Appointment</a></li>
                         </ul>
                     </div>

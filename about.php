@@ -134,8 +134,8 @@ include __DIR__ . '/partials/header.php';
 
                                 <!-- About Author Content Start -->
                                 <div class="about-us-author-content">
-                                    <h3>Devon Lane</h3>
-                                    <p>Internal Medicine Specialist</p>
+                                    <h3>Dr. Munna Singh</h3>
+                                    <p>Director/General Physician</p>
                                 </div>
                                 <!-- About Author Content End -->
                             </div>
