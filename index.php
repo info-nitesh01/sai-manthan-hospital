@@ -288,7 +288,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
                         <p>Browse all professional healthcare services available for you and family</p>
                         <ul>
-                            <li class="section-footer-content">Trusted By <b>58,900+</b> Users</li>
+                            <li class="section-footer-content">Trusted By <b>10,000+</b> Patients</li>
                             <li>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -296,7 +296,7 @@ include __DIR__ . '/partials/header.php';
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </li>
-                            <li><span class="counter">4.9</span>/5</li>
+                            <li><span class="counter">4.6</span>/5</li>
                         </ul>
                     </div>
                     <!-- Section Footer Text End -->
@@ -316,8 +316,8 @@ include __DIR__ . '/partials/header.php';
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <span class="section-sub-title wow fadeInUp">Why Choose Us</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Why choose us for quality healthcare services</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Our experienced medical team focuses on accurate diagnosis, effective treatment, and personalized care to ensure the best outcomes for every patient.</p>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Care You Can Trust at Every Step</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">From accurate diagnosis to compassionate treatment, our dedicated team combines medical expertise, modern facilities, and personalized attention to support every patient's health journey.</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -329,7 +329,7 @@ include __DIR__ . '/partials/header.php';
                                 <div class="why-choose-counter-item-list">
                                     <!-- Why choose Counter Item Start -->
                                     <div class="why-choose-counter-item">
-                                        <h2><span class="counter">25</span>+</h2>
+                                        <h2><span class="counter">8</span>+</h2>
                                         <p>Years Experience</p>
                                     </div>
                                     <!-- Why choose Counter Item End -->
@@ -391,8 +391,8 @@ include __DIR__ . '/partials/header.php';
                                 <img src="images/icons/icon-why-choose-cta-box.svg" alt="">
                             </div>
                             <div class="why-choose-cta-content">
-                                <h2><span class="counter">12</span>+</h2>
-                                <p>Medical Departments</p>
+                                <h2><span class="counter">20,000</span>+</h2>
+                                <p>Satisfied Patients</p>
                             </div>
                         </div>
                         <!-- Why Choose Counter Box End -->
@@ -414,8 +414,8 @@ include __DIR__ . '/partials/header.php';
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <span class="section-sub-title wow fadeInUp">Core Feature</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Core features of our healthcare services</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Our medical services are designed to provide reliable, high-quality care with a strong focus on patient comfort and safety</p>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Everything You Need for Better Care</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">From skilled professionals and advanced facilities to round-the-clock support, every part of our care is designed to protect your comfort, safety, and recovery.</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -722,7 +722,7 @@ include __DIR__ . '/partials/header.php';
                                                 <img src="images/brand/testimonial-quote.svg" alt="">
                                             </div>
                                             <div class="testimonial-item-content">
-                                                <p>“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”</p>
+                                                <p>“The doctors explained every step clearly and made my treatment feel comfortable and reassuring.”</p>
                                             </div>
                                         </div>
                                         <div class="testimonial-item-author">
@@ -732,8 +732,7 @@ include __DIR__ . '/partials/header.php';
                                                 </figure>
                                             </div>
                                             <div class="testimonial-author-content">
-                                                <h2>John Peterson</h2>
-                                                <p>Internal Medicine Specialist</p>
+                                                <h2>Arjun Sharma</h2>
                                             </div>
                                         </div>
                                     </div>
@@ -750,7 +749,7 @@ include __DIR__ . '/partials/header.php';
                                                 <img src="images/brand/testimonial-quote.svg" alt="">
                                             </div>
                                             <div class="testimonial-item-content">
-                                                <p>“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”</p>
+                                                <p>“The nursing team was attentive throughout my stay, and the hospital environment felt clean and welcoming.”</p>
                                             </div>
                                         </div>
                                         <div class="testimonial-item-author">
@@ -760,8 +759,7 @@ include __DIR__ . '/partials/header.php';
                                                 </figure>
                                             </div>
                                             <div class="testimonial-author-content">
-                                                <h2>Maria Gonzalez</h2>
-                                                <p>Internal Medicine Specialist</p>
+                                                <h2>Priya Singh</h2>
                                             </div>
                                         </div>
                                     </div>
@@ -778,7 +776,7 @@ include __DIR__ . '/partials/header.php';
                                                 <img src="images/brand/testimonial-quote.svg" alt="">
                                             </div>
                                             <div class="testimonial-item-content">
-                                                <p>“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”</p>
+                                                <p>“From consultation to follow-up, the staff provided thoughtful guidance and truly listened to my concerns.”</p>
                                             </div>
                                         </div>
                                         <div class="testimonial-item-author">
@@ -788,8 +786,7 @@ include __DIR__ . '/partials/header.php';
                                                 </figure>
                                             </div>
                                             <div class="testimonial-author-content">
-                                                <h2>David Robinson</h2>
-                                                <p>Internal Medicine Specialist</p>
+                                                <h2>Rohan Verma</h2>
                                             </div>
                                         </div>
                                     </div>
@@ -806,7 +803,7 @@ include __DIR__ . '/partials/header.php';
                                                 <img src="images/brand/testimonial-quote.svg" alt="">
                                             </div>
                                             <div class="testimonial-item-content">
-                                                <p>“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”</p>
+                                                <p>“I received prompt care and personal attention at every visit. I am grateful to the entire medical team.”</p>
                                             </div>
                                         </div>
                                         <div class="testimonial-item-author">
@@ -816,8 +813,7 @@ include __DIR__ . '/partials/header.php';
                                                 </figure>
                                             </div>
                                             <div class="testimonial-author-content">
-                                                <h2>Savannah Nguyen</h2>
-                                                <p>Internal Medicine Specialist</p>
+                                                <h2>Anaya Shrivastava</h2>
                                             </div>
                                         </div>
                                     </div>
@@ -863,7 +859,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="section-title section-title-center">
                         <span class="section-sub-title wow fadeInUp">Emergency Care</span>
                         <h2 class="text-anime-style-3" data-cursor="-opaque">24/7 emergency support</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">Our emergency department is available around the clock to provide immediate medical assistance and life-saving care when you need it most.</p>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">When every moment matters, our experienced clinical team provides rapid assessment, immediate treatment, and continuous support to help patients through urgent medical needs.</p>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -936,7 +932,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.6s">
                         <p>Browse all professional healthcare services available for you and family</p>
                         <ul>
-                            <li class="section-footer-content">Trusted By <b>58,900+</b> Users</li>
+                            <li class="section-footer-content">Trusted By <b>10,000+</b> Patients</li>
                             <li>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -944,7 +940,7 @@ include __DIR__ . '/partials/header.php';
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </li>
-                            <li><span class="counter">4.9</span>/5</li>
+                            <li><span class="counter">4.6</span>/5</li>
                         </ul>
                     </div>
                     <!-- Section Footer Text End -->
@@ -970,7 +966,7 @@ include __DIR__ . '/partials/header.php';
 
                         <!-- Google Map Start -->
                         <div class="google-map-iframe wow fadeInUp" data-wow-delay="0.2s">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96737.10562045308!2d-74.08535042841811!3d40.739265258395164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1703158537552!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.0570252161824!2d82.0031904!3d25.933352299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a96d6934d2b89%3A0x4e4992d1d0000000!2sSai%20Manthan%20Hospital!5e0!3m2!1sen!2sin!4v1788960718442!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                         </div>
                         <!-- Google Map End -->
                     </div>
@@ -1039,5 +1035,5 @@ include __DIR__ . '/partials/header.php';
     </div>
     <!-- Our Appointment Section End -->
 
-<?php include __DIR__ . '/partials/footer.php'; ?>\n
+<?php include __DIR__ . '/partials/footer.php'; ?>
 

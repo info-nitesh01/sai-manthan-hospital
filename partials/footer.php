@@ -4,14 +4,14 @@
                 <div class="col-xl-5">
                     <div class="lets-talk-box">
                         <div class="section-title">
-                            <span class="section-sub-title wow fadeInUp">Let's Start Your Project</span>
+                            <span class="section-sub-title wow fadeInUp">Your Health Matters to Us</span>
                             <div class="lets-talk-title">
-                                <h2><a href="contact.html">Let's Talk</a></h2>
-                                <div class="years-experience-circle">
+                                <h2><a href="contact.php">Get in Touch</a></h2>
+                                <!-- <div class="years-experience-circle">
                                     <figure>
-                                        <img src="images/brand/years-experience-circle-accent.svg" alt="">
+                                        <img src="images/brand/years-experience-circle-white.svg" alt="">
                                     </figure>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -25,10 +25,10 @@
                             </div>
                             <div class="footer-social-links">
                                 <ul>
-                                    <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
                                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -37,28 +37,29 @@
                             <h2>Quick Links</h2>
                             <ul>
                                 <li><a href="index.php">Home</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="services.html">Our Services</a></li>
+                                <li><a href="about.php">About Us</a></li>
+                                <li><a href="services.php">Our Services</a></li>
+                                <li><a href="team.php">Our Team</a></li>
                             </ul>
                         </div>
 
                         <div class="footer-links">
                             <h2>Medical Services</h2>
                             <ul>
-                                <li><a href="service-single.html">Pediatric Care</a></li>
-                                <li><a href="service-single.html">Family Medicine</a></li>
-                                <li><a href="service-single.html">Preventive Healthcare</a></li>
-                                <li><a href="service-single.html">Neurology Treatment</a></li>
+                                <li><a href="services.php">Pediatric Care</a></li>
+                                <li><a href="services.php">Obstetrics and Gynecology</a></li>
+                                <li><a href="services.php">Preventive Diagnostics</a></li>
+                                <li><a href="contact.php">Emergency Care</a></li>
                             </ul>
                         </div>
 
                         <div class="footer-links">
                             <h2>Support</h2>
                             <ul>
-                                <li><a href="#">Help Center</a></li>
-                                <li><a href="#">Customer Support</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="contact.html">Contact Support</a></li>
+                                <li><a href="book-appointment.php">Book an Appointment</a></li>
+                                <li><a href="contact.php">Contact Support</a></li>
+                                <li><a href="team.php">Meet Our Team</a></li>
+                                <li><a href="services.php">Explore Services</a></li>
                             </ul>
                         </div>
                     </div>
@@ -71,7 +72,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="footer-copyright-text">
-                            <p>Copyright Â© 2026 All Rights Reserved.</p>
+                            <p>Copyright &copy; 2026 All Rights Reserved.</p>
                         </div>
                     </div>
                 </div>
