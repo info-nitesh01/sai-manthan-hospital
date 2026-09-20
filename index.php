@@ -51,8 +51,8 @@ include __DIR__ . '/partials/header.php';
 
                                 <!-- Hero Client Content Start -->
                                 <div class="hero-client-content">
-                                    <h2><span class="counter">4.6</span>/5<i class="fa fa-solid fa-star"></i></h2>
-                                    <p>More Than 1500 Reviews</p>
+                                    <h2><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5<i class="fa fa-solid fa-star"></i></h2>
+                                    <p>More Than <?php echo $siteData['home_reviews']; ?> Reviews</p>
                                 </div>
                                 <!-- Hero Client Content End -->
                             </div>
@@ -114,8 +114,8 @@ include __DIR__ . '/partials/header.php';
 
                                 <!-- Hero Client Content Start -->
                                 <div class="hero-client-content">
-                                    <h2><span class="counter">4.9</span>/5<i class="fa fa-solid fa-star"></i></h2>
-                                    <p>More Than 2500 Reviews</p>
+                                    <h2><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5<i class="fa fa-solid fa-star"></i></h2>
+                                    <p>More Than <?php echo $siteData['home_reviews']; ?> Reviews</p>
                                 </div>
                                 <!-- Hero Client Content End -->
                             </div>
@@ -288,7 +288,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
                         <p>Browse all professional healthcare services available for you and family</p>
                         <ul>
-                            <li class="section-footer-content">Trusted By <b>10,000+</b> Patients</li>
+                            <li class="section-footer-content">Trusted By <b><?php echo $siteData['trusted_patients']; ?>+</b> Patients</li>
                             <li>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -296,7 +296,7 @@ include __DIR__ . '/partials/header.php';
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </li>
-                            <li><span class="counter">4.6</span>/5</li>
+                            <li><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5</li>
                         </ul>
                     </div>
                     <!-- Section Footer Text End -->
@@ -329,14 +329,14 @@ include __DIR__ . '/partials/header.php';
                                 <div class="why-choose-counter-item-list">
                                     <!-- Why choose Counter Item Start -->
                                     <div class="why-choose-counter-item">
-                                        <h2><span class="counter">8</span>+</h2>
+                                        <h2><span class="counter"><?php echo $siteData['experience_years']; ?></span>+</h2>
                                         <p>Years Experience</p>
                                     </div>
                                     <!-- Why choose Counter Item End -->
 
                                     <!-- Why choose Counter Item Start -->
                                     <div class="why-choose-counter-item">
-                                        <h2><span class="counter">24</span>/7</h2>
+                                        <h2><span class="counter"><?php echo $siteData['emergency_hours']; ?></span>/7</h2>
                                         <p>Emergency Support</p>
                                     </div>
                                     <!-- Why choose Counter Item End -->
@@ -391,7 +391,7 @@ include __DIR__ . '/partials/header.php';
                                 <img src="images/icons/icon-why-choose-cta-box.svg" alt="">
                             </div>
                             <div class="why-choose-cta-content">
-                                <h2><span class="counter">20,000</span>+</h2>
+                                <h2><span class="counter"><?php echo $siteData['trusted_patients']; ?></span>+</h2>
                                 <p>Satisfied Patients</p>
                             </div>
                         </div>
@@ -932,7 +932,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.6s">
                         <p>Browse all professional healthcare services available for you and family</p>
                         <ul>
-                            <li class="section-footer-content">Trusted By <b>10,000+</b> Patients</li>
+                            <li class="section-footer-content">Trusted By <b><?php echo $siteData['trusted_patients']; ?>+</b> Patients</li>
                             <li>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -940,7 +940,7 @@ include __DIR__ . '/partials/header.php';
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </li>
-                            <li><span class="counter">4.6</span>/5</li>
+                            <li><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5</li>
                         </ul>
                     </div>
                     <!-- Section Footer Text End -->

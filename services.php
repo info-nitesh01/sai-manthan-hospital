@@ -96,8 +96,8 @@ include __DIR__ . '/partials/header.php';
                         </div>
                         <div class="service-item-body">
                             <div class="service-item-content">
-                                <h2><a href="services.php">Neurology Treatment</a></h2>
-                                <p>Our pediatric care focus on the health and well-being of infants, children.</p>
+                                <h2><a href="services.php">Gynecology</a></h2>
+                                <p>Compassionate women's health care from checkups to treatment.</p>
                             </div>
                             <div class="service-item-btn">
                                 <a href="services.php" class="readmore-btn">View Details</a>
@@ -115,8 +115,8 @@ include __DIR__ . '/partials/header.php';
                         </div>
                         <div class="service-item-body">
                             <div class="service-item-content">
-                                <h2><a href="services.php">Dermatology Services</a></h2>
-                                <p>Our pediatric care focus on the health and well-being of infants, children.</p>
+                                <h2><a href="services.php">Cardiology</a></h2>
+                                <p>Personalized heart care through evaluation, prevention, and treatment.</p>
                             </div>
                             <div class="service-item-btn">
                                 <a href="services.php" class="readmore-btn">View Details</a>
@@ -207,7 +207,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="fact-item wow fadeInUp">
                         <div class="fact-item-header">
                             <div class="fact-item-counter-content">
-                                <h2><span class="counter">35</span>+</h2>
+                                <h2><span class="counter"><?php echo $siteData['experienced_doctors']; ?></span>+</h2>
                                 <ul>
                                     <li>Experienced Doctors</li>
                                 </ul>
@@ -228,7 +228,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="fact-item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="fact-item-header">
                             <div class="fact-item-counter-content">
-                                <h2><span class="counter">12</span>+</h2>
+                                <h2><span class="counter"><?php echo $siteData['medical_departments']; ?></span>+</h2>
                                 <ul>
                                     <li>Medical Departments</li>
                                 </ul>
@@ -249,7 +249,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="fact-item wow fadeInUp" data-wow-delay="0.4s">
                         <div class="fact-item-header">
                             <div class="fact-item-counter-content">
-                                <h2><span class="counter">24</span>/7</h2>
+                                <h2><span class="counter"><?php echo $siteData['emergency_hours']; ?></span>/7</h2>
                                 <ul>
                                     <li>Emergency Support</li>
                                 </ul>
@@ -270,7 +270,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
                         <p>Browse all professional healthcare services available for you and family</p>
                         <ul>
-                            <li class="section-footer-content">Trusted By <b>58,900+</b> Users</li>
+                            <li class="section-footer-content">Trusted By <b><?php echo $siteData['trusted_patients']; ?>+</b> Patients</li>
                             <li>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -278,7 +278,7 @@ include __DIR__ . '/partials/header.php';
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </li>
-                            <li><span class="counter">4.9</span>/5</li>
+                            <li><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5</li>
                         </ul>
                     </div>
                     <!-- Section Footer Text End -->
@@ -311,14 +311,14 @@ include __DIR__ . '/partials/header.php';
                                 <div class="why-choose-counter-item-list">
                                     <!-- Why choose Counter Item Start -->
                                     <div class="why-choose-counter-item">
-                                        <h2><span class="counter">25</span>+</h2>
+                                        <h2><span class="counter"><?php echo $siteData['experience_years']; ?></span>+</h2>
                                         <p>Years Experience</p>
                                     </div>
                                     <!-- Why choose Counter Item End -->
 
                                     <!-- Why choose Counter Item Start -->
                                     <div class="why-choose-counter-item">
-                                        <h2><span class="counter">24</span>/7</h2>
+                                        <h2><span class="counter"><?php echo $siteData['emergency_hours']; ?></span>/7</h2>
                                         <p>Emergency Support</p>
                                     </div>
                                     <!-- Why choose Counter Item End -->
@@ -373,7 +373,7 @@ include __DIR__ . '/partials/header.php';
                                 <img src="images/icons/icon-why-choose-cta-box.svg" alt="">
                             </div>
                             <div class="why-choose-cta-content">
-                                <h2><span class="counter">12</span>+</h2>
+                                <h2><span class="counter"><?php echo $siteData['medical_departments']; ?></span>+</h2>
                                 <p>Medical Departments</p>
                             </div>
                         </div>
@@ -386,6 +386,7 @@ include __DIR__ . '/partials/header.php';
     </div>
     <!-- Why Choose Us Section End -->
 
+    <?php if (false): ?>
     <!-- Our Approach Section Start -->
     <div class="our-approach bg-section">
         <div class="container">
@@ -428,8 +429,8 @@ include __DIR__ . '/partials/header.php';
 
                             <!-- Hero Client Content Start -->
                             <div class="hero-client-content">
-                                <h2><span class="counter">4.9</span>/5<i class="fa fa-solid fa-star"></i></h2>
-                                <p>More Than 2500 Reviews</p>
+                                <h2><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5<i class="fa fa-solid fa-star"></i></h2>
+                                <p>More Than <?php echo $siteData['home_reviews']; ?> Reviews</p>
                             </div>
                             <!-- Hero Client Content End -->
                         </div>
@@ -480,7 +481,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
                         <p>Browse all professional healthcare services available for you and family</p>
                         <ul>
-                            <li class="section-footer-content">Trusted By <b>58,900+</b> Users</li>
+                            <li class="section-footer-content">Trusted By <b><?php echo $siteData['trusted_patients']; ?>+</b> Patients</li>
                             <li class="section-footer-rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -488,7 +489,7 @@ include __DIR__ . '/partials/header.php';
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </li>
-                            <li><span class="counter">4.9</span>/5</li>
+                            <li><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5</li>
                         </ul>
                     </div>
                     <!-- Section Footer Text End -->
@@ -497,7 +498,9 @@ include __DIR__ . '/partials/header.php';
         </div>
     </div>
     <!-- Our Approach Section End -->
+    <?php endif; ?>
 
+    <?php if (false): ?>
     <!-- Our Expertise Start -->
     <div class="our-expertise">
         <div class="container">
@@ -599,7 +602,9 @@ include __DIR__ . '/partials/header.php';
         </div>
     </div>
     <!-- Our Expertise Section End -->
+    <?php endif; ?>
 
+    <?php if (false): ?>
     <!-- Our Testimonial Section Start -->
     <div class="our-testimonial bg-section">
         <div class="container">
@@ -761,7 +766,9 @@ include __DIR__ . '/partials/header.php';
         </div>
     </div>
     <!-- Our Testimonial Section End -->
+    <?php endif; ?>
 
+    <?php if (false): ?>
     <!-- Our FAQs Section Start -->
     <div class="our-faqs">
         <div class="container">
@@ -887,5 +894,7 @@ include __DIR__ . '/partials/header.php';
             </div>
         </div>
     </div>
-    <!-- Our FAQs Section End -->\n<?php include __DIR__ . '/partials/footer.php'; ?>\n
+    <!-- Our FAQs Section End -->
+    <?php endif; ?>
+<?php include __DIR__ . '/partials/footer.php'; ?>
 

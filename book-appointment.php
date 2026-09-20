@@ -131,7 +131,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="fact-item wow fadeInUp">
                         <div class="fact-item-header">
                             <div class="fact-item-counter-content">
-                                <h2><span class="counter">35</span>+</h2>
+                                <h2><span class="counter"><?php echo $siteData['experienced_doctors']; ?></span>+</h2>
                                 <ul>
                                     <li>Experienced Doctors</li>
                                 </ul>
@@ -152,7 +152,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="fact-item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="fact-item-header">
                             <div class="fact-item-counter-content">
-                                <h2><span class="counter">12</span>+</h2>
+                                <h2><span class="counter"><?php echo $siteData['medical_departments']; ?></span>+</h2>
                                 <ul>
                                     <li>Medical Departments</li>
                                 </ul>
@@ -173,7 +173,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="fact-item wow fadeInUp" data-wow-delay="0.4s">
                         <div class="fact-item-header">
                             <div class="fact-item-counter-content">
-                                <h2><span class="counter">24</span>/7</h2>
+                                <h2><span class="counter"><?php echo $siteData['emergency_hours']; ?></span>/7</h2>
                                 <ul>
                                     <li>Emergency Support</li>
                                 </ul>
@@ -194,7 +194,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
                         <p>Browse all professional healthcare services available for you and family</p>
                         <ul>
-                            <li class="section-footer-content">Trusted By <b>58,900+</b> Users</li>
+                            <li class="section-footer-content">Trusted By <b><?php echo $siteData['trusted_patients']; ?>+</b> Patients</li>
                             <li>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -202,7 +202,7 @@ include __DIR__ . '/partials/header.php';
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </li>
-                            <li><span class="counter">4.9</span>/5</li>
+                            <li><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5</li>
                         </ul>
                     </div>
                     <!-- Section Footer Text End -->
@@ -294,7 +294,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.6s">
                         <p>Browse all professional healthcare services available for you and family</p>
                         <ul>
-                            <li class="section-footer-content">Trusted By <b>58,900+</b> Users</li>
+                            <li class="section-footer-content">Trusted By <b><?php echo $siteData['trusted_patients']; ?>+</b> Patients</li>
                             <li>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -302,7 +302,7 @@ include __DIR__ . '/partials/header.php';
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </li>
-                            <li><span class="counter">4.9</span>/5</li>
+                            <li><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5</li>
                         </ul>
                     </div>
                     <!-- Section Footer Text End -->

@@ -73,8 +73,8 @@ include __DIR__ . '/partials/header.php';
 
                                 <!-- Hero Client Content Start -->
                                 <div class="hero-client-content">
-                                    <h2><span class="counter">4.9</span>/5<i class="fa fa-solid fa-star"></i></h2>
-                                    <p>More Than 2500 Reviews</p>
+                                    <h2><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5<i class="fa fa-solid fa-star"></i></h2>
+                                    <p>More Than <?php echo $siteData['home_reviews']; ?> Reviews</p>
                                 </div>
                                 <!-- Hero Client Content End -->
                             </div>
@@ -192,8 +192,8 @@ include __DIR__ . '/partials/header.php';
 
                             <!-- Hero Client Content Start -->
                             <div class="hero-client-content">
-                                <h2><span class="counter">4.9</span>/5<i class="fa fa-solid fa-star"></i></h2>
-                                <p>More Than 2500 Reviews</p>
+                                <h2><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5<i class="fa fa-solid fa-star"></i></h2>
+                                <p>More Than <?php echo $siteData['home_reviews']; ?> Reviews</p>
                             </div>
                             <!-- Hero Client Content End -->
                         </div>
@@ -244,7 +244,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
                         <p>Browse all professional healthcare services available for you and family</p>
                         <ul>
-                            <li class="section-footer-content">Trusted By <b>58,900+</b> Users</li>
+                            <li class="section-footer-content">Trusted By <b><?php echo $siteData['trusted_patients']; ?>+</b> Patients</li>
                             <li class="section-footer-rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -252,7 +252,7 @@ include __DIR__ . '/partials/header.php';
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </li>
-                            <li><span class="counter">4.9</span>/5</li>
+                            <li><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5</li>
                         </ul>
                     </div>
                     <!-- Section Footer Text End -->
@@ -348,7 +348,7 @@ include __DIR__ . '/partials/header.php';
                             
                             <!-- What We Image Counter Start -->
                             <div class="what-we-image-counter">
-                                <h2><span class="counter">25</span>+</h2>
+                                <h2><span class="counter"><?php echo $siteData['experience_years']; ?></span>+</h2>
                                 <p>Years of Experience</p>
                             </div>
                             <!-- What We Image Counter End -->
@@ -362,6 +362,7 @@ include __DIR__ . '/partials/header.php';
     </div>
     <!-- What We Do End -->
 
+    <?php if (false): ?>
     <!-- Core Features Section Start -->
     <div class="core-features bg-section dark-section">
         <div class="container">
@@ -483,6 +484,9 @@ include __DIR__ . '/partials/header.php';
         </div>
     </div>
     <!-- Core Features Section End -->
+    <?php endif; ?>
+
+    <?php include __DIR__ . '/partials/about-facts.php'; ?>
 
     <!-- Our Expertise Start -->
     <div class="our-expertise">
@@ -586,6 +590,7 @@ include __DIR__ . '/partials/header.php';
     </div>
     <!-- Our Expertise Section End -->
 
+    <?php if (false): ?>
     <!-- Our Fact Section Start -->
     <div class="our-facts bg-section dark-section">
         <div class="container">
@@ -606,7 +611,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="fact-item wow fadeInUp">
                         <div class="fact-item-header">
                             <div class="fact-item-counter-content">
-                                <h2><span class="counter">35</span>+</h2>
+                                <h2><span class="counter"><?php echo $siteData['experienced_doctors']; ?></span>+</h2>
                                 <ul>
                                     <li>Experienced Doctors</li>
                                 </ul>
@@ -627,7 +632,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="fact-item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="fact-item-header">
                             <div class="fact-item-counter-content">
-                                <h2><span class="counter">12</span>+</h2>
+                                <h2><span class="counter"><?php echo $siteData['medical_departments']; ?></span>+</h2>
                                 <ul>
                                     <li>Medical Departments</li>
                                 </ul>
@@ -648,7 +653,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="fact-item wow fadeInUp" data-wow-delay="0.4s">
                         <div class="fact-item-header">
                             <div class="fact-item-counter-content">
-                                <h2><span class="counter">24</span>/7</h2>
+                                <h2><span class="counter"><?php echo $siteData['emergency_hours']; ?></span>/7</h2>
                                 <ul>
                                     <li>Emergency Support</li>
                                 </ul>
@@ -669,7 +674,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
                         <p>Browse all professional healthcare services available for you and family</p>
                         <ul>
-                            <li class="section-footer-content">Trusted By <b>58,900+</b> Users</li>
+                            <li class="section-footer-content">Trusted By <b><?php echo $siteData['trusted_patients']; ?>+</b> Patients</li>
                             <li>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -677,7 +682,7 @@ include __DIR__ . '/partials/header.php';
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </li>
-                            <li><span class="counter">4.9</span>/5</li>
+                            <li><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5</li>
                         </ul>
                     </div>
                     <!-- Section Footer Text End -->
@@ -686,7 +691,9 @@ include __DIR__ . '/partials/header.php';
         </div>
     </div>
     <!-- Our Fact Section End -->
+    <?php endif; ?>
 
+    <?php if (false): ?>
     <!-- Our Team Section Start -->
     <div class="our-team">
         <div class="container">
@@ -852,7 +859,9 @@ include __DIR__ . '/partials/header.php';
         </div>
     </div>
     <!-- Our Team Section End -->
+    <?php endif; ?>
 
+    <?php if (false): ?>
     <!-- Our Testimonial Section Start -->
     <div class="our-testimonial bg-section">
         <div class="container">
@@ -1014,7 +1023,9 @@ include __DIR__ . '/partials/header.php';
         </div>
     </div>
     <!-- Our Testimonial Section End -->
+    <?php endif; ?>
 
+    <?php if (false): ?>
     <!-- Our FAQs Section Start -->
     <div class="our-faqs">
         <div class="container">
@@ -1140,5 +1151,7 @@ include __DIR__ . '/partials/header.php';
             </div>
         </div>
     </div>
-    <!-- Our FAQs Section End -->\n<?php include __DIR__ . '/partials/footer.php'; ?>\n
+    <!-- Our FAQs Section End -->
+    <?php endif; ?>
+<?php include __DIR__ . '/partials/footer.php'; ?>
 
