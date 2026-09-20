@@ -362,16 +362,15 @@ a:focus{
 	stroke-width: 1.5;
 	stroke-linecap: round;
 	stroke-linejoin: round;
-	stroke-dasharray: 260;
-	stroke-dashoffset: 260;
+	stroke-dasharray: 1;
+	stroke-dashoffset: 1;
 	animation: ecg-draw 1.6s linear infinite;
 }
 
 @keyframes ecg-draw{
 	0%{
-		stroke-dashoffset: 260;
+		stroke-dashoffset: 1;
 	}
-	50%,
 	100%{
 		stroke-dashoffset: 0;
 	}
