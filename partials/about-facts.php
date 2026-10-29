@@ -5,81 +5,41 @@
             <div class="col-lg-12">
                 <!-- Section Title Start -->
                 <div class="section-title section-title-center">
-                    <span class="section-sub-title wow fadeInUp">Fact / Statistics</span>
-                    <h2 class="text-anime-style-3" data-cursor="-opaque">Key statistics that reflect our medical excellence</h2>
+                    <span class="section-sub-title wow fadeInUp"><?php echo htmlspecialchars($facts['sub_title']); ?></span>
+                    <h2 class="text-anime-style-3" data-cursor="-opaque"><?php echo htmlspecialchars($facts['title']); ?></h2>
                 </div>
                 <!-- Section Title End -->
             </div>
         </div>
 
         <div class="row">
-            <div class="col-xl-4 col-md-6">
-                <!-- Fact Item Start -->
-                <div class="fact-item wow fadeInUp">
-                    <div class="fact-item-header">
-                        <div class="fact-item-counter-content">
-                            <h2><span class="counter"><?php echo $siteData['experienced_doctors']; ?></span>+</h2>
-                            <ul>
-                                <li>Experienced Doctors</li>
-                            </ul>
+            <?php $delay = 0; foreach ($facts['items'] as $item): ?>
+                <div class="col-xl-4 col-md-6">
+                    <!-- Fact Item Start -->
+                    <div class="fact-item wow fadeInUp" data-wow-delay="<?php echo $delay; ?>s">
+                        <div class="fact-item-header">
+                            <div class="fact-item-counter-content">
+                                <h2><span class="counter"><?php echo $siteData[$item['site_key']]; ?></span><?php echo $item['suffix']; ?></h2>
+                                <ul>
+                                    <li><?php echo htmlspecialchars($item['label']); ?></li>
+                                </ul>
+                            </div>
+                            <div class="icon-box">
+                                <img src="images/icons/<?php echo $item['icon']; ?>" alt="">
+                            </div>
                         </div>
-                        <div class="icon-box">
-                            <img src="images/icons/icon-fact-item-1.svg" alt="">
+                        <div class="fact-item-content">
+                            <p><?php echo htmlspecialchars($item['desc']); ?></p>
                         </div>
                     </div>
-                    <div class="fact-item-content">
-                        <p>Our team of experienced doctor dedicated to providing expert medical care with.</p>
-                    </div>
+                    <!-- Fact Item End -->
                 </div>
-                <!-- Fact Item End -->
-            </div>
-
-            <div class="col-xl-4 col-md-6">
-                <!-- Fact Item Start -->
-                <div class="fact-item wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="fact-item-header">
-                        <div class="fact-item-counter-content">
-                            <h2><span class="counter"><?php echo $siteData['medical_departments']; ?></span>+</h2>
-                            <ul>
-                                <li>Medical Departments</li>
-                            </ul>
-                        </div>
-                        <div class="icon-box">
-                            <img src="images/icons/icon-fact-item-2.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="fact-item-content">
-                        <p>Our team of experienced doctor dedicated to providing expert medical care with.</p>
-                    </div>
-                </div>
-                <!-- Fact Item End -->
-            </div>
-
-            <div class="col-xl-4 col-md-6">
-                <!-- Fact Item Start -->
-                <div class="fact-item wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="fact-item-header">
-                        <div class="fact-item-counter-content">
-                            <h2><span class="counter"><?php echo $siteData['emergency_hours']; ?></span>/7</h2>
-                            <ul>
-                                <li>Emergency Support</li>
-                            </ul>
-                        </div>
-                        <div class="icon-box">
-                            <img src="images/icons/icon-fact-item-3.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="fact-item-content">
-                        <p>Our team of experienced doctor dedicated to providing expert medical care with.</p>
-                    </div>
-                </div>
-                <!-- Fact Item End -->
-            </div>
+                <?php $delay += 0.2; endforeach; ?>
 
             <div class="col-lg-12">
                 <!-- Section Footer Text Start -->
                 <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
-                    <p>Browse all professional healthcare services available for you and family</p>
+                    <p><?php echo htmlspecialchars($facts['footer_text']); ?></p>
                     <ul>
                         <li class="section-footer-content">Trusted By <b><?php echo $siteData['trusted_patients']; ?>+</b> Patients</li>
                         <li>

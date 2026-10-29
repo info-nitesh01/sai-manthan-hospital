@@ -3,6 +3,11 @@ $pageTitle = 'About Us';
 include __DIR__ . '/partials/head.php';
 include __DIR__ . '/partials/preloader.php';
 include __DIR__ . '/partials/header.php';
+$about = require __DIR__ . '/data/common-about.php';
+$approach = require __DIR__ . '/data/about-approach.php';
+$whatWeDo = require __DIR__ . '/data/about-what-we-do.php';
+$facts = require __DIR__ . '/data/common-facts.php';
+$expertise = require __DIR__ . '/data/about-expertise.php';
 ?>
     <!-- Page Header Section Start -->
     <div class="page-header dark-section parallaxie">
@@ -53,21 +58,13 @@ include __DIR__ . '/partials/header.php';
                             <div class="about-review-box hero-client-box">
                                 <!-- Satisfy Client Image Start -->
                                 <div class="satisfy-client-images">
-                                    <div class="satisfy-client-image">
-                                        <figure class="image-anime">
-                                            <img src="images/people/author-1.jpg" alt="">
-                                        </figure>
-                                    </div>
-                                    <div class="satisfy-client-image">
-                                        <figure class="image-anime">
-                                            <img src="images/people/author-2.jpg" alt="">
-                                        </figure>
-                                    </div>
-                                    <div class="satisfy-client-image">
-                                        <figure class="image-anime">
-                                            <img src="images/people/author-3.jpg" alt="">
-                                        </figure>
-                                    </div>
+                                    <?php foreach ($about['client_images'] as $img): ?>
+                                        <div class="satisfy-client-image">
+                                            <figure class="image-anime">
+                                                <img src="<?php echo $img; ?>" alt="">
+                                            </figure>
+                                        </div>
+                                    <?php endforeach; ?>
                                 </div>
                                 <!-- Satisfy Client Image End -->
 
@@ -90,27 +87,22 @@ include __DIR__ . '/partials/header.php';
                     <div class="about-us-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <span class="section-sub-title wow fadeInUp">About Us</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">About our journey providing quality healthcare</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">We are dedicated to providing compassionate, high-quality healthcare that focuses on your overall well-being. Our experienced medical professionals technology with personalized care to ensure every patient receives.</p>
+                            <span class="section-sub-title wow fadeInUp"><?php echo htmlspecialchars($about['sub_title']); ?></span>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque"><?php echo htmlspecialchars($about['title']); ?></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s"><?php echo htmlspecialchars($about['description']); ?></p>
                         </div>
                         <!-- Section Title End -->
 
                         <!-- About Us Item List Start -->
                         <div class="about-us-item-list wow fadeInUp" data-wow-delay="0.4s">
-                            <!-- About Us Item Start -->
-                            <div class="about-us-item">
-                                <h3>Patient Focused Care</h3>
-                                <p>We prioritize every personalized care, clear communication.</p>
-                            </div>
-                            <!-- About Us Item End -->
-
-                            <!-- About Us Item Start -->
-                            <div class="about-us-item">
-                                <h3>Quality Medical Treatment</h3>
-                                <p>We prioritize every personalized care, clear communication.</p>
-                            </div>
-                            <!-- About Us Item End -->
+                            <?php foreach ($about['items'] as $item): ?>
+                                <!-- About Us Item Start -->
+                                <div class="about-us-item">
+                                    <h3><?php echo htmlspecialchars($item['title']); ?></h3>
+                                    <p><?php echo htmlspecialchars($item['desc']); ?></p>
+                                </div>
+                                <!-- About Us Item End -->
+                            <?php endforeach; ?>
                         </div>
                         <!-- About Us Item List End -->
 
@@ -118,7 +110,7 @@ include __DIR__ . '/partials/header.php';
                         <div class="about-content-footer wow fadeInUp" data-wow-delay="0.6s">
                             <!-- About Us Button Start -->
                             <div class="about-us-btn">
-                                <a href="contact.php" class="btn-default">Contact us now</a>
+                                <a href="<?php echo $about['button_link']; ?>" class="btn-default"><?php echo htmlspecialchars($about['button_text']); ?></a>
                             </div>
                             <!-- About Us Button End -->
 
@@ -127,15 +119,15 @@ include __DIR__ . '/partials/header.php';
                                 <!-- About Author Image Start -->
                                 <div class="about-us-author-image">
                                     <figure class="image-anime">
-                                        <img src="images/people/author-1.jpg" alt="">
+                                        <img src="<?php echo $about['author_image']; ?>" alt="">
                                     </figure>
                                 </div>
                                 <!-- About Author Image End -->
 
                                 <!-- About Author Content Start -->
                                 <div class="about-us-author-content">
-                                    <h3>Dr. Munna Singh</h3>
-                                    <p>Director/General Physician</p>
+                                    <h3><?php echo htmlspecialchars($about['author_name']); ?></h3>
+                                    <p><?php echo htmlspecialchars($about['author_role']); ?></p>
                                 </div>
                                 <!-- About Author Content End -->
                             </div>
@@ -157,8 +149,8 @@ include __DIR__ . '/partials/header.php';
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
                     <div class="section-title section-title-center">
-                        <span class="section-sub-title">Our Approach</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Our patient first approach to quality healthcare</h2>
+                        <span class="section-sub-title"><?php echo htmlspecialchars($approach['sub_title']); ?></span>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque"><?php echo htmlspecialchars($approach['title']); ?></h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -172,21 +164,13 @@ include __DIR__ . '/partials/header.php';
                         <div class="hero-client-box">
                             <!-- Satisfy Client Image Start -->
                             <div class="satisfy-client-images">
-                                <div class="satisfy-client-image">
-                                    <figure class="image-anime">
-                                        <img src="images/people/author-1.jpg" alt="">
-                                    </figure>
-                                </div>
-                                <div class="satisfy-client-image">
-                                    <figure class="image-anime">
-                                        <img src="images/people/author-2.jpg" alt="">
-                                    </figure>
-                                </div>
-                                <div class="satisfy-client-image">
-                                    <figure class="image-anime">
-                                        <img src="images/people/author-3.jpg" alt="">
-                                    </figure>
-                                </div>
+                                <?php foreach ($about['client_images'] as $img): ?>
+                                    <div class="satisfy-client-image">
+                                        <figure class="image-anime">
+                                            <img src="<?php echo $img; ?>" alt="">
+                                        </figure>
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
                             <!-- Satisfy Client Image End -->
 
@@ -201,48 +185,36 @@ include __DIR__ . '/partials/header.php';
                         
                         <div class="approach-cta-body">
                             <div class="approach-cta-content">
-                                <p>We prioritize comfort, trust, and treatment to ensure the best possible health outcomes for every patient.</p>
+                                <p><?php echo htmlspecialchars($approach['cta_text']); ?></p>
                             </div>
                             <div class="approach-cta-btn">
-                                <a href="contact.php" class="btn-default">24/7 Services for Emergancy</a>
+                                <a href="<?php echo $approach['cta_link']; ?>" class="btn-default"><?php echo htmlspecialchars($approach['cta_button']); ?></a>
                             </div>
                         </div>
                     </div>
                     <!-- Approach CTA Box End -->
                 </div>
 
+                <?php $delay = 0.2; foreach ($approach['items'] as $item): ?>
                 <div class="col-xl-4 col-md-6">
                     <!-- Approach Item Start -->
-                    <div class="approach-item wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="approach-item wow fadeInUp" data-wow-delay="<?php echo $delay; ?>s">
                         <div class="icon-box">
-                            <img src="images/icons/icon-approach-item-1.svg" alt="">
+                            <img src="images/icons/<?php echo $item['icon']; ?>" alt="">
                         </div>
                         <div class="approach-item-content">
-                            <h3>Your Health Our Priority</h3>
-                            <p>Your health is at the heart of everything we do. We are committed to high-quality care tailored to your journey.</p>
+                            <h3><?php echo htmlspecialchars($item['title']); ?></h3>
+                            <p><?php echo htmlspecialchars($item['desc']); ?></p>
                         </div>
                     </div>
                     <!-- Approach Item End -->
                 </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Approach Item Start -->
-                    <div class="approach-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="icon-box">
-                            <img src="images/icons/icon-approach-item-2.svg" alt="">
-                        </div>
-                        <div class="approach-item-content">
-                            <h3>Vision For Better Healthcare</h3>
-                            <p>Your health is at the heart of everything we do. We are committed to high-quality care tailored to your journey.</p>
-                        </div>
-                    </div>
-                    <!-- Approach Item End -->
-                </div>
+                <?php $delay += 0.2; endforeach; ?>
 
                 <div class="col-lg-12">
                     <!-- Section Footer Text Start -->
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
-                        <p>Browse all professional healthcare services available for you and family</p>
+                        <p><?php echo htmlspecialchars($approach['footer_text']); ?></p>
                         <ul>
                             <li class="section-footer-content">Trusted By <b><?php echo $siteData['trusted_patients']; ?>+</b> Patients</li>
                             <li class="section-footer-rating">
@@ -271,19 +243,18 @@ include __DIR__ . '/partials/header.php';
                     <div class="what-we-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <span class="section-sub-title wow fadeInUp">What We Do</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Advanced medical services with compassionate care</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Our experienced team uses modern technology and proven treatments to deliver accurate diagnoses, effective solutions.</p>
+                            <span class="section-sub-title wow fadeInUp"><?php echo htmlspecialchars($whatWeDo['sub_title']); ?></span>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque"><?php echo htmlspecialchars($whatWeDo['title']); ?></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s"><?php echo htmlspecialchars($whatWeDo['description']); ?></p>
                         </div>
                         <!-- Section Title End -->
 
                         <!-- What We Content List Start -->
                         <div class="what-we-content-list wow fadeInUp" data-wow-delay="0.4s">
                             <ul>
-                                <li>Comprehensive Patient Care</li>
-                                <li>Preventive Care Programs</li>
-                                <li>Advanced Medical Services</li>
-                                <li>Personalized Treatment Plan</li>
+                                <?php foreach ($whatWeDo['list'] as $item): ?>
+                                    <li><?php echo htmlspecialchars($item); ?></li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
                         <!-- What We Content List End -->
@@ -292,7 +263,7 @@ include __DIR__ . '/partials/header.php';
                         <div class="what-we-footer wow fadeInUp" data-wow-delay="0.6s">
                             <!-- What We Do Button Start -->
                             <div class="what-we-do-btn">
-                                <a href="contact.php" class="btn-default">Book Appointment</a>
+                                <a href="<?php echo $whatWeDo['button_link']; ?>" class="btn-default"><?php echo htmlspecialchars($whatWeDo['button_text']); ?></a>
                             </div>
                             <!-- What We Do Button End -->
 
@@ -303,7 +274,8 @@ include __DIR__ . '/partials/header.php';
                                 </div>
                                 <div class="what-we-contact-item-content">
                                     <p>Emergency Call</p>
-                                    <h3><a href="tel:+123456789">+(123) 456-789</a></h3>
+                                    <?php $phone = $siteData['contact']['emergency_phones'][0]; ?>
+                                    <h3><a href="tel:<?php echo $phone; ?>"><?php echo htmlspecialchars($phone); ?></a></h3>
                                 </div>
                             </div>
                             <!-- What We Contact Item End -->
@@ -509,7 +481,7 @@ include __DIR__ . '/partials/header.php';
                         <div class="expertise-image-box-2">
                             <div class="expertise-experience-circle">
                                 <figure>
-                                    <img src="images/brand/experience-circle-accent.svg" alt="">
+                                    <img src="images/brand/years-experience-circle-white.svg" alt="">
                                 </figure>
                             </div>
                             <div class="expertise-image">
@@ -528,37 +500,27 @@ include __DIR__ . '/partials/header.php';
                     <div class="our-expertise-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <span class="section-sub-title wow fadeInUp">Medical Expertise</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Experience and expertise you can trust always</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">With years of hands-on experience and deep medical expertise, we provide care you can trust at every step our skilled professionals are committed.</p>
+                            <span class="section-sub-title wow fadeInUp"><?php echo htmlspecialchars($expertise['sub_title']); ?></span>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque"><?php echo htmlspecialchars($expertise['title']); ?></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s"><?php echo htmlspecialchars($expertise['description']); ?></p>
                         </div>
                         <!-- Section Title End -->
 
                         <!-- Expertise Item List Start -->
                         <div class="expertise-item-list">
-                            <!-- Expertise Item Start -->
-                            <div class="expertise-item">
-                                <div class="circle" data-size="60" data-value="0.85">
-                                    <div class="progress_value"><span class="pro_data"></span><span>%</span></div>
+                            <?php $delay = 0; foreach ($expertise['items'] as $item): ?>
+                                <!-- Expertise Item Start -->
+                                <div class="expertise-item">
+                                    <div class="circle" data-size="60" data-value="<?php echo $item['value']; ?>">
+                                        <div class="progress_value"><span class="pro_data"></span><span>%</span></div>
+                                    </div>
+                                    <div class="expertise-item-content">
+                                        <h3><?php echo htmlspecialchars($item['title']); ?></h3>
+                                        <p><?php echo htmlspecialchars($item['desc']); ?></p>
+                                    </div>
                                 </div>
-                                <div class="expertise-item-content">
-                                    <h3>General Medicine And Primary Care</h3>
-                                    <p>Our General Medicine and Primary Care services focus on patients.</p>
-                                </div>
-                            </div>
-                            <!-- Expertise Item End -->
-
-                            <!-- Expertise Item Start -->
-                            <div class="expertise-item">
-                                <div class="circle" data-size="60" data-value="0.67">
-                                    <div class="progress_value"><span class="pro_data"></span><span>%</span></div>
-                                </div>
-                                <div class="expertise-item-content">
-                                    <h3>Orthopedic And Bone Treatments</h3>
-                                    <p>Our General Medicine and Primary Care services focus on patients.</p>
-                                </div>
-                            </div>
-                            <!-- Expertise Item End -->
+                                <!-- Expertise Item End -->
+                            <?php $delay += 0.2; endforeach; ?>
                         </div>
 
                         <!-- Expertise Content Footer Start -->
@@ -576,7 +538,8 @@ include __DIR__ . '/partials/header.php';
                                 </div>
                                 <div class="what-we-contact-item-content">
                                     <p>Emergency Call</p>
-                                    <h3><a href="tel:+123456789">+(123) 456-789</a></h3>
+                                    <?php $phone = $siteData['contact']['emergency_phones'][0]; ?>
+                                    <h3><a href="tel:<?php echo $phone; ?>"><?php echo htmlspecialchars($phone); ?></a></h3>
                                 </div>
                             </div>
                             <!-- What We Contact Item End -->

@@ -3,6 +3,7 @@ $pageTitle = 'Our Team';
 include __DIR__ . '/partials/head.php';
 include __DIR__ . '/partials/preloader.php';
 include __DIR__ . '/partials/header.php';
+$team = require __DIR__ . '/data/common-team.php';
 ?>
 <!-- Page Header Section Start -->
     <div class="page-header dark-section parallaxie">
@@ -30,203 +31,27 @@ include __DIR__ . '/partials/header.php';
     <div class="page-team">
         <div class="container">
             <div class="row">
-                <div class="col-xl-4 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp">
-                        <div class="team-item-image">
-                            <a href="team-single.php" data-cursor-text="View">
-                                <figure>
-                                    <img src="images/people/team-1.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="team-item-body">
-                            <div class="team-social-list-box">
-                                <div class="team-social-btn">
-                                    <a href="team-single.php"><img src="images/icons/icon-share.svg" alt=""></a>
-                                </div> 
-                                <div class="team-social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    </ul>
+                <?php $delay = 0; foreach ($team['members'] as $member): ?>
+                    <div class="col-xl-4 col-md-6">
+                        <!-- Team Item Start -->
+                        <div class="team-item wow fadeInUp" data-wow-delay="<?php echo $delay; ?>s">
+                            <div class="team-item-image">
+                                <a href="team-single.php?name=<?php echo urlencode($member['name']); ?>" data-cursor-text="View">
+                                    <figure>
+                                        <img src="<?php echo $member['image']; ?>" alt="">
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="team-item-body">
+                                <div class="team-item-content">
+                                    <h2><a href="team-single.php?name=<?php echo urlencode($member['name']); ?>"><?php echo htmlspecialchars($member['name']); ?></a></h2>
+                                    <p><?php echo htmlspecialchars($member['role']); ?></p>
                                 </div>
                             </div>
-                            <div class="team-item-content">
-                                <h2><a href="team-single.php">Dr. David Wilson</a></h2>
-                                <p>Cardiologist</p>
-                            </div>
                         </div>
+                        <!-- Team Item End -->
                     </div>
-                    <!-- Team Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="team-item-image">
-                            <a href="team-single.php" data-cursor-text="View">
-                                <figure>
-                                    <img src="images/people/team-2.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="team-item-body">
-                            <div class="team-social-list-box">
-                                <div class="team-social-btn">
-                                    <a href="team-single.php"><img src="images/icons/icon-share.svg" alt=""></a>
-                                </div> 
-                                <div class="team-social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-item-content">
-                                <h2><a href="team-single.php">Dr. Emma Roberts</a></h2>
-                                <p>Pediatric Specialist</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-item-image">
-                            <a href="team-single.php" data-cursor-text="View">
-                                <figure>
-                                    <img src="images/people/team-3.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="team-item-body">
-                            <div class="team-social-list-box">
-                                <div class="team-social-btn">
-                                    <a href="team-single.php"><img src="images/icons/icon-share.svg" alt=""></a>
-                                </div> 
-                                <div class="team-social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-item-content">
-                                <h2><a href="team-single.php">Dr. Michael Johnson</a></h2>
-                                <p>Orthopedic Surgeon</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item-image">
-                            <a href="team-single.php" data-cursor-text="View">
-                                <figure>
-                                    <img src="images/people/team-4.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="team-item-body">
-                            <div class="team-social-list-box">
-                                <div class="team-social-btn">
-                                    <a href="team-single.php"><img src="images/icons/icon-share.svg" alt=""></a>
-                                </div> 
-                                <div class="team-social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-item-content">
-                                <h2><a href="team-single.php">Dr. Olivia Martinez</a></h2>
-                                <p>Neurologist</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="team-item-image">
-                            <a href="team-single.php" data-cursor-text="View">
-                                <figure>
-                                    <img src="images/people/team-5.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="team-item-body">
-                            <div class="team-social-list-box">
-                                <div class="team-social-btn">
-                                    <a href="team-single.php"><img src="images/icons/icon-share.svg" alt=""></a>
-                                </div> 
-                                <div class="team-social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-item-content">
-                                <h2><a href="team-single.php">Dr. David Wilson</a></h2>
-                                <p>Gynecologist</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="1s">
-                        <div class="team-item-image">
-                            <a href="team-single.php" data-cursor-text="View">
-                                <figure>
-                                    <img src="images/people/team-6.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="team-item-body">
-                            <div class="team-social-list-box">
-                                <div class="team-social-btn">
-                                    <a href="team-single.php"><img src="images/icons/icon-share.svg" alt=""></a>
-                                </div> 
-                                <div class="team-social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-item-content">
-                                <h2><a href="team-single.php">Dr. William Harris</a></h2>
-                                <p>ENT Specialist</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Item End -->
-                </div>
+                    <?php $delay += 0.2; endforeach; ?>
             </div>
         </div>
     </div>

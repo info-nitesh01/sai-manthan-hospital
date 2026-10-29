@@ -1,6 +1,6 @@
 ﻿<?php
 $pageTitle = $pageTitle ?? 'Sai Manthan Hospital';
-$siteData = require __DIR__ . '/../data/site-data.php';
+$siteData = require __DIR__ . '/../data/site-common-data.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

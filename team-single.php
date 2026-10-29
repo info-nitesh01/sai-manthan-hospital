@@ -3,6 +3,13 @@ $pageTitle = 'Team Details';
 include __DIR__ . '/partials/head.php';
 include __DIR__ . '/partials/preloader.php';
 include __DIR__ . '/partials/header.php';
+
+$teamData = require __DIR__ . '/data/common-team.php';
+$memberName = $_GET['name'] ?? array_key_first($teamData['members_detail']);
+if (!isset($teamData['members_detail'][$memberName])) {
+    $memberName = array_key_first($teamData['members_detail']);
+}
+$member = $teamData['members_detail'][$memberName];
 ?>
     <!-- Page Header Section Start -->
     <div class="page-header dark-section parallaxie">
@@ -11,12 +18,12 @@ include __DIR__ . '/partials/header.php';
                 <div class="col-lg-12">
                     <!-- Page Header Box Start -->
                     <div class="page-header-box">
-                        <h1 class="text-anime-style-3" data-cursor="-opaque">Dr. david wilson</h1>
+                        <h1 class="text-anime-style-3" data-cursor="-opaque"><?php echo htmlspecialchars($member['name'] ?? ''); ?></h1>
                         <nav class="wow fadeInUp" >
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                <li class="breadcrumb-item"><a href="about.php">Team</a></li>
-                                <li class="breadcrumb-item active" aria-current="page"> Dr. david wilson</li>
+                                <li class="breadcrumb-item"><a href="team.php">Team</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"><?php echo htmlspecialchars($memberName); ?></li>
                             </ol>
                         </nav>
                     </div>
@@ -37,70 +44,10 @@ include __DIR__ . '/partials/header.php';
                         <!-- Team Single Image Start -->
                         <div class="team-single-image">
                             <figure class="image-anime reveal">
-                                <img src="images/people/team-1.jpg" alt="">
+                                <img src="<?php echo $member['image'] ?? ''; ?>" alt="">
                             </figure>
                         </div>
                         <!-- Team Single Image End -->
-
-                        <!-- Sidebar CTA Box Start -->
-                        <div class="team-sidebar-cta-box dark-section wow fadeInUp" data-wow-delay="0.25s">
-                            <div class="team-sidebar-cta-title">
-                                <h2>Contact Details:</h2>
-                            </div>
-
-                            <!-- Team Sidebar CTA List Start -->
-                            <div class="team-sidebar-cta-list">
-                                <!-- Team Sidebar CTA Item Start -->
-                                <div class="team-sidebar-cta-item">
-                                    <div class="icon-box">
-                                        <img src="images/icons/icon-headphone.svg" alt="">
-                                    </div>
-                                    <div class="team-sidebar-cta-item-content">
-                                        <p>Call Us!</p>
-                                        <h3><a href="tel:123456789">+(123) 456-789</a></h3>
-                                    </div>
-                                </div>
-                                <!-- Team Sidebar CTA Item End -->
-
-                                <!-- Team Sidebar CTA Item Start -->
-                                <div class="team-sidebar-cta-item">
-                                    <div class="icon-box">
-                                        <img src="images/icons/icon-mail-white.svg" alt="">
-                                    </div>
-                                    <div class="team-sidebar-cta-item-content">
-                                        <p>E-mail Us!</p>
-                                        <h3><a href="mailto:info@domainname.com">domain@gmail.com</a></h3>
-                                    </div>
-                                </div>
-                                <!-- Team Sidebar CTA Item End -->
-
-                                <!-- Team Sidebar CTA Item Start -->
-                                <div class="team-sidebar-cta-item">
-                                    <div class="icon-box">
-                                        <img src="images/icons/icon-position.svg" alt="">
-                                    </div>
-                                    <div class="team-sidebar-cta-item-content">
-                                        <p>Position:</p>
-                                        <h3>Cardiologist</h3>
-                                    </div>
-                                </div>
-                                <!-- Team Sidebar CTA Item End -->
-
-                                <!-- Team Sidebar CTA Item Start -->
-                                <div class="team-sidebar-cta-item">
-                                    <div class="icon-box">
-                                        <img src="images/icons/icon-location-white.svg" alt="">
-                                    </div>
-                                    <div class="team-sidebar-cta-item-content">
-                                        <p>Location:</p>
-                                        <h3>123 Health Street, 001</h3>
-                                    </div>
-                                </div>
-                                <!-- Team Sidebar CTA Item End -->
-                            </div>
-                            <!-- Team Sidebar CTA List End -->
-                        </div>
-                        <!-- Sidebar CTA Box End -->
                     </div>
                     <!-- Page Single Sidebar End -->
                 </div>
@@ -113,31 +60,25 @@ include __DIR__ . '/partials/header.php';
                             <!-- Section Title Start -->
                             <div class="section-title">
                                 <h2 class="text-anime-style-3" data-cursor="-opaque">About me</h2>
-                                <p class="wow fadeInUp">Dr. David Wilson is a highly experienced cardiologist specializing in the diagnosis and treatment of heart-related conditions. With over 12 years of medical expertise, he is dedicated to providing advanced cardiac care using modern technology and evidence-based treatments.</p>
+                                <p class="wow fadeInUp"><?php echo htmlspecialchars($member['about'] ?? ''); ?></p>
                             </div>
                             <!-- Section Title End -->
 
                             <!-- About Item List Start -->
                             <div class="member-about-item-list">
-                                <!-- About Item Start -->
-                                <div class="member-about-item wow fadeInUp" data-wow-delay="0.2s">
-                                    <h3>Pediatric And Geriatric Care</h3>
-                                    <p>Our Mission is to become a trusted and leading healthcare provider known for excellence, innovation, and advanced medical care.</p>
-                                    <ul>
-                                        <li>Patient-Centered Care Approach</li>
-                                    </ul>
-                                </div>
-                                <!-- About Item End -->
-
-                                <!-- About Item Start -->
-                                <div class="member-about-item wow fadeInUp" data-wow-delay="0.4s">
-                                    <h3>Wellness Counseling</h3>
-                                    <p>Our vision is to become a trusted and leading healthcare provider known for excellence, innovation, and advanced medical care.</p>
-                                    <ul>
-                                        <li>Modern UI Mission & Vision Layout</li>
-                                    </ul>
-                                </div>
-                                <!-- About Item End -->
+                                <?php foreach ($member['about_items'] as $item): ?>
+                                    <!-- About Item Start -->
+                                    <div class="member-about-item wow fadeInUp">
+                                        <h3><?php echo htmlspecialchars($item['title']); ?></h3>
+                                        <p><?php echo htmlspecialchars($item['desc']); ?></p>
+                                        <ul>
+                                            <?php foreach ($item['list'] as $listItem): ?>
+                                                <li><?php echo htmlspecialchars($listItem); ?></li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    </div>
+                                    <!-- About Item End -->
+                                <?php endforeach; ?>
                             </div>
                             <!-- About Item List End -->
                         </div>
@@ -148,35 +89,25 @@ include __DIR__ . '/partials/header.php';
                             <!-- Section Title Start -->
                             <div class="section-title">
                                 <h2 class="text-anime-style-3" data-cursor="-opaque">Education & qualifications</h2>
-                                <p class="wow fadeInUp">With years of experience and deep medical knowledge, I specialize in providing accurate diagnosis, advanced treatment, and personalized care. My expertise focuses on ensuring the best possible outcomes while maintaining patient comfort and trust.</p>
+                                <p class="wow fadeInUp">With years of experience and deep medical knowledge, I specialize in providing accurate diagnosis, advanced treatment, and personalized care.</p>
                             </div>
                             <!-- Section Title End -->
-                            
+
                             <!-- Member Education List Start -->
                             <div class="member-education-list">
-                                <!-- Member Education Item Start -->
-                                <div class="member-education-item wow fadeInUp" data-wow-delay="0.2s">
-                                    <div class="icon-box">
-                                        <img src="images/icons/icon-member-education-1.svg" alt="">
+                                <?php foreach ($member['education'] as $edu): ?>
+                                    <!-- Member Education Item Start -->
+                                    <div class="member-education-item wow fadeInUp">
+                                        <div class="icon-box">
+                                            <img src="images/icons/icon-member-education-1.svg" alt="">
+                                        </div>
+                                        <div class="member-education-item-content">
+                                            <h3><?php echo htmlspecialchars($edu['title']); ?></h3>
+                                            <p><?php echo htmlspecialchars($edu['desc']); ?></p>
+                                        </div>
                                     </div>
-                                    <div class="member-education-item-content">
-                                        <h3>Doctor of Medicine (MD)</h3>
-                                        <p>This qualification reflects a strong commitment to medical excellence, ethical continuous learning in delivering safe.</p>
-                                    </div>
-                                </div>
-                                <!-- Member Education Item End -->
-
-                                <!-- Member Education Item Start -->
-                                <div class="member-education-item wow fadeInUp" data-wow-delay="0.4s">
-                                    <div class="icon-box">
-                                        <img src="images/icons/icon-member-education-2.svg" alt="">
-                                    </div>
-                                    <div class="member-education-item-content">
-                                        <h3>Board Certified In Family Medicine</h3>
-                                        <p>This qualification reflects a strong commitment to medical excellence, ethical continuous learning in delivering safe.</p>
-                                    </div>
-                                </div>
-                                <!-- Member Education Item End -->
+                                    <!-- Member Education Item End -->
+                                <?php endforeach; ?>
                             </div>
                             <!-- Member Education List End -->
                         </div>
@@ -193,123 +124,31 @@ include __DIR__ . '/partials/header.php';
 
                              <!-- Member Skills List Start -->
                             <div class="member-skill-list">
-                                <!-- Skills Progress Bar Start -->
-                                <div class="skills-progress-bar">
-                                    <!-- Skill Item Start -->
-                                    <div class="skillbar" data-percent="95%">
-                                        <div class="skill-data">
-                                            <div class="skill-title">Cardiac Diagnosis</div>
-                                            <div class="skill-no">95%</div>
+                                <?php foreach ($member['skills'] as $skill): ?>
+                                    <!-- Skills Progress Bar Start -->
+                                    <div class="skills-progress-bar">
+                                        <!-- Skill Item Start -->
+                                        <div class="skillbar" data-percent="<?php echo $skill['percent']; ?>">
+                                            <div class="skill-data">
+                                                <div class="skill-title"><?php echo htmlspecialchars($skill['title']); ?></div>
+                                                <div class="skill-no"><?php echo $skill['percent']; ?></div>
+                                            </div>
+                                            <div class="skill-progress">
+                                                <div class="count-bar"></div>
+                                            </div>
                                         </div>
-                                        <div class="skill-progress">
-                                            <div class="count-bar"></div>
-                                        </div>
+                                        <!-- Skill Item End -->
                                     </div>
-                                    <!-- Skill Item End -->
-                                </div>
-                                <!-- Skills Progress Bar End -->
-
-                                <!-- Skills Progress Bar Start -->
-                                <div class="skills-progress-bar">
-                                    <!-- Skill Item Start -->
-                                    <div class="skillbar" data-percent="85%">
-                                        <div class="skill-data">
-                                            <div class="skill-title">Heart Disease Treatment</div>
-                                            <div class="skill-no">85%</div>
-                                        </div>
-                                        <div class="skill-progress">
-                                            <div class="count-bar"></div>
-                                        </div>
-                                    </div>
-                                    <!-- Skill Item End -->
-                                </div>
-                                <!-- Skills Progress Bar End -->
-
-                                <!-- Skills Progress Bar Start -->
-                                <div class="skills-progress-bar">
-                                    <!-- Skill Item Start -->
-                                    <div class="skillbar" data-percent="90%">
-                                        <div class="skill-data">
-                                            <div class="skill-title">Preventive Care</div>
-                                            <div class="skill-no">90%</div>
-                                        </div>
-                                        <div class="skill-progress">
-                                            <div class="count-bar"></div>
-                                        </div>
-                                    </div>
-                                    <!-- Skill Item End -->
-                                </div>
-                                <!-- Skills Progress Bar End -->
-
-                                <!-- Skills Progress Bar Start -->
-                                <div class="skills-progress-bar">
-                                    <!-- Skill Item Start -->
-                                    <div class="skillbar" data-percent="65%">
-                                        <div class="skill-data">
-                                            <div class="skill-title">Patient Care & Communication</div>
-                                            <div class="skill-no">65%</div>
-                                        </div>
-                                        <div class="skill-progress">
-                                            <div class="count-bar"></div>
-                                        </div>
-                                    </div>
-                                    <!-- Skill Item End -->
-                                </div>
-                                <!-- Skills Progress Bar End -->
+                                    <!-- Skills Progress Bar End -->
+                                <?php endforeach; ?>
                             </div>
                             <!-- Member Skills List End -->
                         </div>
                         <!-- Team Member Expertise End -->
-
-                        <!-- Contact Form Start -->
-                        <div class="contact-form team-contact-form">
-                            <!-- Section Title Start -->
-                            <div class="section-title">
-                                <h2 class="text-anime-style-3" data-cursor="-opaque">Contact to david wilson</h2>
-                            </div>
-                            <!-- Section Title End -->
-
-                            <!-- Contact Form Start -->
-                            <form id="contactForm" action="#" method="POST" data-toggle="validator" class="wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="row">
-                                    <div class="form-group col-md-6 mb-4">
-                                        <input type="text" name="fname" class="form-control" id="fname" placeholder="First Name*" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group col-md-6 mb-4">
-                                        <input type="text" name="lname" class="form-control" id="lname" placeholder="Last Name*" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group col-md-6 mb-4">
-                                        <input type="text" name="call" class="form-control" id="call" placeholder="Phone Number*" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group col-md-6 mb-4">
-                                        <input type="email" name ="mail" class="form-control" id="mail" placeholder="E-mail Address*" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group col-md-12 mb-5">
-                                        <textarea name="msg" class="form-control" id="msg" rows="5" placeholder="Write Message Here..."></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <button type="submit" class="btn-default">Submit Message</button>
-                                        <div id="formsubmit" class="h3 hidden"></div>
-                                    </div>
-                                </div>
-                            </form>
-                            <!-- Contact Form End -->
-                        </div>
-                        <!-- Contact Form End -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Page Team Single End -->\n<?php include __DIR__ . '/partials/footer.php'; ?>\n
-
+    <!-- Page Team Single End -->
+<?php include __DIR__ . '/partials/footer.php'; ?>

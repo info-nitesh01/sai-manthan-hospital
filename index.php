@@ -3,6 +3,15 @@ $pageTitle = 'Sai Manthan Hospital Pratapgarh | 24/7 Multispecialty Care';
 include __DIR__ . '/partials/head.php';
 include __DIR__ . '/partials/preloader.php';
 include __DIR__ . '/partials/header.php';
+$hero = require __DIR__ . '/data/home-hero.php';
+$about = require __DIR__ . '/data/common-about.php';
+$services = require __DIR__ . '/data/home-services.php';
+$why = require __DIR__ . '/data/home-why-choose-us.php';
+$features = require __DIR__ . '/data/home-core-features.php';
+$team = require __DIR__ . '/data/common-team.php';
+$testimonials = require __DIR__ . '/data/home-testimonials.php';
+$support = require __DIR__ . '/data/home-support.php';
+$appointment = require __DIR__ . '/data/home-appointment.php';
 ?>
     <!-- Hero Section Start -->
     <div class="hero dark-section parallaxie">
@@ -13,9 +22,9 @@ include __DIR__ . '/partials/header.php';
                     <div class="hero-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <span class="section-sub-title wow fadeInUp">Transforming Care, Transforming Lives.</span>
-                            <h1 class="text-anime-style-3" data-cursor="-opaque">Welcome to Sai Manthan Hospital, Pratapgarh</h1>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Your well-being is our priority. We combine compassionate care from expert professionals with advanced medical technology to deliver solutions you can trust.</p>
+                            <span class="section-sub-title wow fadeInUp"><?php echo htmlspecialchars($hero['sub_title']); ?></span>
+                            <h1 class="text-anime-style-3" data-cursor="-opaque"><?php echo htmlspecialchars($hero['title']); ?></h1>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s"><?php echo htmlspecialchars($hero['description']); ?></p>
                         </div>
                         <!-- Section Title End -->
 
@@ -23,7 +32,7 @@ include __DIR__ . '/partials/header.php';
                         <div class="hero-content-body wow fadeInUp" data-wow-delay="0.4s">
                             <!-- Hero Button Start -->
                             <div class="hero-btn">
-                                <a href="contact.php" class="btn-default btn-highlighted">Start Consultation</a>
+                                <a href="<?php echo $hero['button_link']; ?>" class="btn-default btn-highlighted"><?php echo htmlspecialchars($hero['button_text']); ?></a>
                             </div>
                             <!-- Hero Button End -->
 
@@ -31,21 +40,13 @@ include __DIR__ . '/partials/header.php';
                             <div class="hero-client-box">
                                 <!-- Satisfy Client Image Start -->
                                 <div class="satisfy-client-images">
-                                    <div class="satisfy-client-image">
-                                        <figure class="image-anime">
-                                            <img src="images/people/author-1.jpg" alt="">
-                                        </figure>
-                                    </div>
-                                    <div class="satisfy-client-image">
-                                        <figure class="image-anime">
-                                            <img src="images/people/author-2.jpg" alt="">
-                                        </figure>
-                                    </div>
-                                    <div class="satisfy-client-image">
-                                        <figure class="image-anime">
-                                            <img src="images/people/author-3.jpg" alt="">
-                                        </figure>
-                                    </div>
+                                    <?php foreach ($hero['client_images'] as $img): ?>
+                                        <div class="satisfy-client-image">
+                                            <figure class="image-anime">
+                                                <img src="<?php echo $img; ?>" alt="">
+                                            </figure>
+                                        </div>
+                                    <?php endforeach; ?>
                                 </div>
                                 <!-- Satisfy Client Image End -->
 
@@ -94,21 +95,13 @@ include __DIR__ . '/partials/header.php';
                             <div class="about-review-box hero-client-box">
                                 <!-- Satisfy Client Image Start -->
                                 <div class="satisfy-client-images">
-                                    <div class="satisfy-client-image">
-                                        <figure class="image-anime">
-                                            <img src="images/people/author-1.jpg" alt="">
-                                        </figure>
-                                    </div>
-                                    <div class="satisfy-client-image">
-                                        <figure class="image-anime">
-                                            <img src="images/people/author-2.jpg" alt="">
-                                        </figure>
-                                    </div>
-                                    <div class="satisfy-client-image">
-                                        <figure class="image-anime">
-                                            <img src="images/people/author-3.jpg" alt="">
-                                        </figure>
-                                    </div>
+                                    <?php foreach ($about['client_images'] as $img): ?>
+                                        <div class="satisfy-client-image">
+                                            <figure class="image-anime">
+                                                <img src="<?php echo $img; ?>" alt="">
+                                            </figure>
+                                        </div>
+                                    <?php endforeach; ?>
                                 </div>
                                 <!-- Satisfy Client Image End -->
 
@@ -131,27 +124,22 @@ include __DIR__ . '/partials/header.php';
                     <div class="about-us-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <span class="section-sub-title wow fadeInUp">About Us</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Building a Foundation of Quality Care</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Your health and well-being are at the heart of everything we do. By blending state-of-the-art technology with deeply personalized care, our experienced medical team ensures you receive the compassionate, high-quality treatment you deserve.</p>
+                            <span class="section-sub-title wow fadeInUp"><?php echo htmlspecialchars($about['sub_title']); ?></span>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque"><?php echo htmlspecialchars($about['title']); ?></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s"><?php echo htmlspecialchars($about['description']); ?></p>
                         </div>
                         <!-- Section Title End -->
 
                         <!-- About Us Item List Start -->
                         <div class="about-us-item-list wow fadeInUp" data-wow-delay="0.4s">
-                            <!-- About Us Item Start -->
-                            <div class="about-us-item">
-                                <h3>Patient Focused Care</h3>
-                                <p>We prioritize every personalized care, clear communication.</p>
-                            </div>
-                            <!-- About Us Item End -->
-
-                            <!-- About Us Item Start -->
-                            <div class="about-us-item">
-                                <h3>Quality Medical Treatment</h3>
-                                <p>We prioritize every personalized care, clear communication.</p>
-                            </div>
-                            <!-- About Us Item End -->
+                            <?php foreach ($about['items'] as $item): ?>
+                                <!-- About Us Item Start -->
+                                <div class="about-us-item">
+                                    <h3><?php echo htmlspecialchars($item['title']); ?></h3>
+                                    <p><?php echo htmlspecialchars($item['desc']); ?></p>
+                                </div>
+                                <!-- About Us Item End -->
+                            <?php endforeach; ?>
                         </div>
                         <!-- About Us Item List End -->
 
@@ -159,7 +147,7 @@ include __DIR__ . '/partials/header.php';
                         <div class="about-content-footer wow fadeInUp" data-wow-delay="0.6s">
                             <!-- About Us Button Start -->
                             <div class="about-us-btn">
-                                <a href="about.php" class="btn-default">Learn More About</a>
+                                <a href="<?php echo $about['button_link']; ?>" class="btn-default"><?php echo htmlspecialchars($about['button_text']); ?></a>
                             </div>
                             <!-- About Us Button End -->
 
@@ -168,15 +156,15 @@ include __DIR__ . '/partials/header.php';
                                 <!-- About Author Image Start -->
                                 <div class="about-us-author-image">
                                     <figure class="image-anime">
-                                        <img src="images/people/author-1.jpg" alt="">
+                                        <img src="<?php echo $about['author_image']; ?>" alt="">
                                     </figure>
                                 </div>
                                 <!-- About Author Image End -->
 
                                 <!-- About Author Content Start -->
                                 <div class="about-us-author-content">
-                                    <h3>Dr. Munna Singh</h3>
-                                    <p>Director/General Physician</p>
+                                    <h3><?php echo htmlspecialchars($about['author_name']); ?></h3>
+                                    <p><?php echo htmlspecialchars($about['author_role']); ?></p>
                                 </div>
                                 <!-- About Author Content End -->
                             </div>
@@ -198,84 +186,48 @@ include __DIR__ . '/partials/header.php';
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
                     <div class="section-title section-title-center">
-                        <span class="section-sub-title wow fadeInUp">Our Services</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Comprehensive 24/7 Medical &amp; Emergency Services</h2>
+                        <span class="section-sub-title wow fadeInUp"><?php echo htmlspecialchars($services['sub_title']); ?></span>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque"><?php echo htmlspecialchars($services['title']); ?></h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-xl-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp">
-                        <div class="icon-box">
-                            <img src="images/icons/icon-service-item-1.svg" alt="">
-                        </div>
-                        <div class="service-item-body">
-                            <div class="service-item-content">
-                                <h2><a href="services.php">Pediatric Care</a></h2>
-                                <p>The pediatric care focuses on the health and rapid recovery of infants and children, providing attentive nursing and continuous vital monitoring for acute illnesses.</p>
+                <?php foreach ($services['services'] as $svc): ?>
+                    <div class="col-xl-3 col-md-6">
+                        <!-- Service Item Start -->
+                        <div class="service-item wow fadeInUp">
+                            <div class="icon-box">
+                                <img src="images/icons/<?php echo $svc['icon']; ?>" alt="">
                             </div>
-                            <div class="service-item-btn">
-                                <a href="services.php" class="readmore-btn">View Details</a>
+                            <div class="service-item-body">
+                                <div class="service-item-content">
+                                    <h2><a href="<?php echo $svc['link']; ?>"><?php echo htmlspecialchars($svc['title']); ?></a></h2>
+                                    <p><?php echo htmlspecialchars($svc['desc']); ?></p>
+                                </div>
+                                <div class="service-item-btn">
+                                    <a href="<?php echo $svc['link']; ?>" class="readmore-btn">View Details</a>
+                                </div>
                             </div>
                         </div>
+                        <!-- Service Item End -->
                     </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-xl-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="icon-box">
-                            <img src="images/icons/icon-service-item-2.svg" alt="">
-                        </div>
-                        <div class="service-item-body">
-                            <div class="service-item-content">
-                                <h2><a href="services.php">Obstetrics and Gynecology</a></h2>
-                                <p>The maternal care focuses on the well-being of expecting mothers and their babies, offering comprehensive support from routine antenatal tracking to full labor room management.</p>
-                            </div>
-                            <div class="service-item-btn">
-                                <a href="services.php" class="readmore-btn">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-xl-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="icon-box">
-                            <img src="images/icons/icon-service-item-3.svg" alt="">
-                        </div>
-                        <div class="service-item-body">
-                            <div class="service-item-content">
-                                <h2><a href="services.php">Preventive Diagnostics</a></h2>
-                                <p>The diagnostic and preventive healthcare services focus on accurate, rapid laboratory testing and comprehensive checkups to proactively monitor and manage patient health.</p>
-                            </div>
-                            <div class="service-item-btn">
-                                <a href="services.php" class="readmore-btn">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Service Item End -->
-                </div>
+                <?php endforeach; ?>
 
                 <div class="col-xl-3 col-md-6">
                     <!-- Service Cta Box Start -->
-                    <div class="service-item service-cta-box wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="service-item service-cta-box wow fadeInUp">
                         <!-- Service Cta Box Title Start -->
                         <div class="service-cta-box-title">
-                            <h3>Your Health Starts With One Call</h3>
+                            <h3><?php echo htmlspecialchars($services['cta_title']); ?></h3>
                         </div>
                         <!-- Service Cta Box Title End -->
 
                         <!-- Service Cta Box Image Start -->
                         <div class="service-cta-box-image">
                             <figure>
-                                <img src="images/about/our-service-box.png" alt="">
+                                <img src="<?php echo $services['cta_image']; ?>" alt="">
                             </figure>
                         </div>
                         <!-- Service Cta Box  Image End -->
@@ -286,7 +238,7 @@ include __DIR__ . '/partials/header.php';
                 <div class="col-lg-12">
                     <!-- Section Footer Text Start -->
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
-                        <p>Browse all professional healthcare services available for you and family</p>
+                        <p><?php echo htmlspecialchars($services['footer_text']); ?></p>
                         <ul>
                             <li class="section-footer-content">Trusted By <b><?php echo $siteData['trusted_patients']; ?>+</b> Patients</li>
                             <li>
@@ -315,9 +267,9 @@ include __DIR__ . '/partials/header.php';
                     <div class="why-choose-us-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <span class="section-sub-title wow fadeInUp">Why Choose Us</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Our Specialties: Obstetrics, Orthopedics &amp; Pediatrics</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">From accurate diagnosis to compassionate treatment, our dedicated team combines medical expertise, modern facilities, and personalized attention to support every patient's health journey.</p>
+                            <span class="section-sub-title wow fadeInUp"><?php echo htmlspecialchars($why['sub_title']); ?></span>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque"><?php echo htmlspecialchars($why['title']); ?></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s"><?php echo htmlspecialchars($why['description']); ?></p>
                         </div>
                         <!-- Section Title End -->
 
@@ -413,15 +365,15 @@ include __DIR__ . '/partials/header.php';
                     <div class="core-features-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <span class="section-sub-title wow fadeInUp">Core Feature</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Advanced Diagnostics &amp; Pathology in Bela Pratapgarh</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">From skilled professionals and advanced facilities to round-the-clock support, every part of our care is designed to protect your comfort, safety, and recovery.</p>
+                            <span class="section-sub-title wow fadeInUp"><?php echo htmlspecialchars($features['sub_title']); ?></span>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque"><?php echo htmlspecialchars($features['title']); ?></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s"><?php echo htmlspecialchars($features['description']); ?></p>
                         </div>
                         <!-- Section Title End -->
 
                         <!-- Core Features Content Button Start -->
                         <div class="core-features-content-btn wow fadeInUp" data-wow-delay="0.4s">
-                            <a href="contact.php" class="btn-default btn-highlighted">Contact Us</a>
+                            <a href="<?php echo $features['button_link']; ?>" class="btn-default btn-highlighted"><?php echo htmlspecialchars($features['button_text']); ?></a>
                         </div>
                         <!-- Core Features Content Button End -->
                     </div>
@@ -431,93 +383,18 @@ include __DIR__ . '/partials/header.php';
                 <div class="col-xl-7">
                     <!-- Core Features Item List Start -->
                     <div class="core-features-item-list">
-                        <!-- Core Features Item Start -->
-                        <div class="core-features-item wow fadeInUp">
-                            <div class="icon-box">
-                                <img src="images/icons/icon-core-features-item-1.svg" alt="">
+                        <?php $delay = 0; foreach ($features['features'] as $feat): ?>
+                            <!-- Core Features Item Start -->
+                            <div class="core-features-item wow fadeInUp" data-wow-delay="<?php echo $delay; ?>s">
+                                <div class="icon-box">
+                                    <img src="images/icons/icon-core-features-item-<?php echo ($delay === 0 ? 1 : (int)($delay / 0.2) + 1); ?>.svg" alt="">
+                                </div>
+                                <div class="core-features-item-content">
+                                    <h3><?php echo htmlspecialchars($feat); ?></h3>
+                                </div>
                             </div>
-                            <div class="core-features-item-content">
-                                <h3>Quality Medical Treatment</h3>
-                            </div>
-                        </div>
-                        <!-- Core Features Item End -->
-
-                        <!-- Core Features Item Start -->
-                        <div class="core-features-item wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="icon-box">
-                                <img src="images/icons/icon-core-features-item-2.svg" alt="">
-                            </div>
-                            <div class="core-features-item-content">
-                                <h3>Personalized Patient Care</h3>
-                            </div>
-                        </div>
-                        <!-- Core Features Item End -->
-
-                        <!-- Core Features Item Start -->
-                        <div class="core-features-item wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="icon-box">
-                                <img src="images/icons/icon-core-features-item-3.svg" alt="">
-                            </div>
-                            <div class="core-features-item-content">
-                                <h3>Modern Medical Facilities</h3>
-                            </div>
-                        </div>
-                        <!-- Core Features Item End -->
-
-                        <!-- Core Features Item Start -->
-                        <div class="core-features-item wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="icon-box">
-                                <img src="images/icons/icon-core-features-item-4.svg" alt="">
-                            </div>
-                            <div class="core-features-item-content">
-                                <h3>24/7 Emergency Support</h3>
-                            </div>
-                        </div>
-                        <!-- Core Features Item End -->
-
-                        <!-- Core Features Item Start -->
-                        <div class="core-features-item wow fadeInUp" data-wow-delay="0.8s">
-                            <div class="icon-box">
-                                <img src="images/icons/icon-core-features-item-5.svg" alt="">
-                            </div>
-                            <div class="core-features-item-content">
-                                <h3>Fast and Accurate Test Results</h3>
-                            </div>
-                        </div>
-                        <!-- Core Features Item End -->
-
-                        <!-- Core Features Item Start -->
-                        <div class="core-features-item wow fadeInUp" data-wow-delay="1s">
-                            <div class="icon-box">
-                                <img src="images/icons/icon-core-features-item-6.svg" alt="">
-                            </div>
-                            <div class="core-features-item-content">
-                                <h3>Safe and Comfortable Environment</h3>
-                            </div>
-                        </div>
-                        <!-- Core Features Item End -->
-
-                        <!-- Core Features Item Start -->
-                        <div class="core-features-item wow fadeInUp" data-wow-delay="1.2s">
-                            <div class="icon-box">
-                                <img src="images/icons/icon-core-features-item-7.svg" alt="">
-                            </div>
-                            <div class="core-features-item-content">
-                                <h3>Experienced Medical Professionals</h3>
-                            </div>
-                        </div>
-                        <!-- Core Features Item End -->
-
-                        <!-- Core Features Item Start -->
-                        <div class="core-features-item wow fadeInUp" data-wow-delay="1.4s">
-                            <div class="icon-box">
-                                <img src="images/icons/icon-core-features-item-8.svg" alt="">
-                            </div>
-                            <div class="core-features-item-content">
-                                <h3>Advanced Diagnostic Technology</h3>
-                            </div>
-                        </div>
-                        <!-- Core Features Item End -->
+                            <!-- Core Features Item End -->
+                            <?php $delay += 0.2; endforeach; ?>
                     </div>
                     <!-- Core Features Item List End -->
                 </div>
@@ -532,141 +409,41 @@ include __DIR__ . '/partials/header.php';
             <div class="row section-row">
                 <div class="col-lg-12">
                     <div class="section-title section-title-center">
-                        <span class="section-sub-title wow fadeInUp">Our Team</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Our skilled medical team serving patients with care</h2>
+                        <span class="section-sub-title wow fadeInUp"><?php echo htmlspecialchars($team['sub_title']); ?></span>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque"><?php echo htmlspecialchars($team['title']); ?></h2>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-xl-4 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp">
-                        <!-- Team Item Iamage Start -->
-                        <div class="team-item-image">
-                            <a href="team-single.php" data-cursor-text="View">
-                                <figure>
-                                    <img src="images/people/team-1.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Team Item Iamage End -->
+                <?php $delay = 0; foreach (array_slice($team['members'], 0, 3) as $member): ?>
+                    <div class="col-xl-4 col-md-6">
+                        <!-- Team Item Start -->
+                        <div class="team-item wow fadeInUp" data-wow-delay="<?php echo $delay; ?>s">
+                            <!-- Team Item Iamage Start -->
+                            <div class="team-item-image">
+                                <a href="team-single.php?name=<?php echo urlencode($member['name']); ?>" data-cursor-text="View">
+                                    <figure>
+                                        <img src="<?php echo $member['image']; ?>" alt="">
+                                    </figure>
+                                </a>
+                            </div>
+                            <!-- Team Item Iamage End -->
 
-                        <!-- Team Item Body Start -->
-                        <div class="team-item-body">
-                            <!-- Team Social List Box Start -->
-                            <div class="team-social-list-box">
-                                <div class="team-social-btn">
-                                    <a href="team-single.php"><img src="images/icons/icon-share.svg" alt=""></a>
-                                </div> 
-                                <div class="team-social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    </ul>
+                            <!-- Team Item Body Start -->
+                            <div class="team-item-body">
+                                <!-- Team Item Content Start -->
+                                <div class="team-item-content">
+                                    <h2><a href="team-single.php?name=<?php echo urlencode($member['name']); ?>"><?php echo htmlspecialchars($member['name']); ?></a></h2>
+                                    <p><?php echo htmlspecialchars($member['role']); ?></p>
                                 </div>
+                                <!-- Team Item Content End -->
                             </div>
-                            <!-- Team Social List Box End -->
-
-                            <!-- Team Item Content Start -->
-                            <div class="team-item-content">
-                                <h2><a href="team-single.php">Dr. David Wilson</a></h2>
-                                <p>Cardiologist</p>
-                            </div>
-                            <!-- Team Item Content End -->
+                            <!-- Team Item Body End -->
                         </div>
-                        <!-- Team Item Body End -->
+                        <!-- Team Item End -->
                     </div>
-                    <!-- Team Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
-                        <!-- Team Item Iamage Start -->
-                        <div class="team-item-image">
-                            <a href="team-single.php" data-cursor-text="View">
-                                <figure>
-                                    <img src="images/people/team-2.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Team Item Iamage End -->
-
-                        <!-- Team Item Body Start -->
-                        <div class="team-item-body">
-                            <!-- Team Social List Box Start -->
-                            <div class="team-social-list-box">
-                                <div class="team-social-btn">
-                                    <a href="team-single.php"><img src="images/icons/icon-share.svg" alt=""></a>
-                                </div> 
-                                <div class="team-social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Team Social List Box End -->
-
-                            <!-- Team Item Content Start -->
-                            <div class="team-item-content">
-                                <h2><a href="team-single.php">Dr. Emma Roberts</a></h2>
-                                <p>Pediatric Specialist</p>
-                            </div>
-                            <!-- Team Item Content End -->
-                        </div>
-                        <!-- Team Item Body End -->
-                    </div>
-                    <!-- Team Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="0.4s">
-                        <!-- Team Item Iamage Start -->
-                        <div class="team-item-image">
-                            <a href="team-single.php" data-cursor-text="View">
-                                <figure>
-                                    <img src="images/people/team-3.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Team Item Iamage End -->
-
-                        <!-- Team Item Body Start -->
-                        <div class="team-item-body">
-                            <!-- Team Social List Box Start -->
-                            <div class="team-social-list-box">
-                                <div class="team-social-btn">
-                                    <a href="team-single.php"><img src="images/icons/icon-share.svg" alt=""></a>
-                                </div> 
-                                <div class="team-social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Team Social List Box End -->
-
-                            <!-- Team Item Content Start -->
-                            <div class="team-item-content">
-                                <h2><a href="team-single.php">Dr. Michael Johnson</a></h2>
-                                <p>Orthopedic Surgeon</p>
-                            </div>
-                            <!-- Team Item Content End -->
-                        </div>
-                        <!-- Team Item Body End -->
-                    </div>
-                    <!-- Team Item End -->
-                </div>
+                <?php $delay += 0.2; endforeach; ?>
 
                 <div class="col-lg-12">
                     <!-- Section Footer Text Start -->
@@ -699,9 +476,9 @@ include __DIR__ . '/partials/header.php';
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
                     <div class="section-title section-title-center">
-                        <span class="section-sub-title wow fadeInUp">Patients Testimonials</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">What our patients are saying</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">Hear from our patients about their experiences with our dedicated medical team and quality healthcare services their feedback reflects our commitment.</p>
+                        <span class="section-sub-title wow fadeInUp"><?php echo htmlspecialchars($testimonials['sub_title']); ?></span>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque"><?php echo htmlspecialchars($testimonials['title']); ?></h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s"><?php echo htmlspecialchars($testimonials['description']); ?></p>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -713,113 +490,34 @@ include __DIR__ . '/partials/header.php';
                     <div class="testimonial-slider wow fadeInUp">
                         <div class="swiper">
                             <div class="swiper-wrapper" data-cursor-text="Drag">
-                                <!-- Swiper Slide Start -->
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Item Start -->
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-item-header">
-                                            <div class="testimonial-item-quote">
-                                                <img src="images/brand/testimonial-quote.svg" alt="">
+                                <?php foreach ($testimonials['testimonials'] as $t): ?>
+                                    <!-- Swiper Slide Start -->
+                                    <div class="swiper-slide">
+                                        <!-- Testimonial Item Start -->
+                                        <div class="testimonial-item">
+                                            <div class="testimonial-item-header">
+                                                <div class="testimonial-item-quote">
+                                                    <img src="images/brand/testimonial-quote.svg" alt="">
+                                                </div>
+                                                <div class="testimonial-item-content">
+                                                    <p><?php echo htmlspecialchars($t['quote']); ?></p>
+                                                </div>
                                             </div>
-                                            <div class="testimonial-item-content">
-                                                <p>“The doctors explained every step clearly and made my treatment feel comfortable and reassuring.”</p>
+                                            <div class="testimonial-item-author">
+                                                <div class="testimonial-author-image">
+                                                    <figure class="image-anime">
+                                                        <img src="<?php echo $t['image']; ?>" alt="">
+                                                    </figure>
+                                                </div>
+                                                <div class="testimonial-author-content">
+                                                    <h2><?php echo htmlspecialchars($t['author']); ?></h2>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="testimonial-item-author">
-                                            <div class="testimonial-author-image">
-                                                <figure class="image-anime">
-                                                    <img src="images/people/author-1.jpg" alt="">
-                                                </figure>
-                                            </div>
-                                            <div class="testimonial-author-content">
-                                                <h2>Arjun Sharma</h2>
-                                            </div>
-                                        </div>
+                                        <!-- Testimonial Item End -->
                                     </div>
-                                    <!-- Testimonial Item End -->
-                                </div>
-                                <!-- Swiper Slide End -->
-
-                                <!-- Swiper Slide Start -->
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Item Start -->
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-item-header">
-                                            <div class="testimonial-item-quote">
-                                                <img src="images/brand/testimonial-quote.svg" alt="">
-                                            </div>
-                                            <div class="testimonial-item-content">
-                                                <p>“The nursing team was attentive throughout my stay, and the hospital environment felt clean and welcoming.”</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-item-author">
-                                            <div class="testimonial-author-image">
-                                                <figure class="image-anime">
-                                                    <img src="images/people/author-5.jpg" alt="">
-                                                </figure>
-                                            </div>
-                                            <div class="testimonial-author-content">
-                                                <h2>Priya Singh</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Item End -->
-                                </div>
-                                <!-- Swiper Slide End -->
-
-                                <!-- Swiper Slide Start -->
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Item Start -->
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-item-header">
-                                            <div class="testimonial-item-quote">
-                                                <img src="images/brand/testimonial-quote.svg" alt="">
-                                            </div>
-                                            <div class="testimonial-item-content">
-                                                <p>“From consultation to follow-up, the staff provided thoughtful guidance and truly listened to my concerns.”</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-item-author">
-                                            <div class="testimonial-author-image">
-                                                <figure class="image-anime">
-                                                    <img src="images/people/author-3.jpg" alt="">
-                                                </figure>
-                                            </div>
-                                            <div class="testimonial-author-content">
-                                                <h2>Rohan Verma</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Item End -->
-                                </div>
-                                <!-- Swiper Slide End -->
-
-                                <!-- Swiper Slide Start -->
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Item Start -->
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-item-header">
-                                            <div class="testimonial-item-quote">
-                                                <img src="images/brand/testimonial-quote.svg" alt="">
-                                            </div>
-                                            <div class="testimonial-item-content">
-                                                <p>“I received prompt care and personal attention at every visit. I am grateful to the entire medical team.”</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-item-author">
-                                            <div class="testimonial-author-image">
-                                                <figure class="image-anime">
-                                                    <img src="images/people/author-4.jpg" alt="">
-                                                </figure>
-                                            </div>
-                                            <div class="testimonial-author-content">
-                                                <h2>Anaya Shrivastava</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Item End -->
-                                </div>
-                                <!-- Swiper Slide End -->
+                                    <!-- Swiper Slide End -->
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
@@ -841,7 +539,7 @@ include __DIR__ . '/partials/header.php';
                             </div>
                         </div>
                         <!-- Satisfy Client Images End -->    
-                        <p>Helping You Move from Concern to Confidence with Expert Medical Care. -<a href="contact.php">View our All reviews</a></p>
+                        <p><?php echo $testimonials['footer_text']; ?></p>
                     </div>
                     <!-- Section Footer Text End -->
                 </div>
@@ -855,12 +553,12 @@ include __DIR__ . '/partials/header.php';
         <div class="container">
             <div class="row section-row">
                 <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title section-title-center">
-                        <span class="section-sub-title wow fadeInUp">Emergency Care</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">24/7 emergency support</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">When every moment matters, our experienced clinical team provides rapid assessment, immediate treatment, and continuous support to help patients through urgent medical needs.</p>
-                    </div>
+                        <!-- Section Title Start -->
+                        <div class="section-title section-title-center">
+                            <span class="section-sub-title wow fadeInUp"><?php echo htmlspecialchars($support['sub_title']); ?></span>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque"><?php echo htmlspecialchars($support['title']); ?></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s"><?php echo htmlspecialchars($support['description']); ?></p>
+                        </div>
                     <!-- Section Title End -->
                 </div>
             </div>
@@ -887,16 +585,16 @@ include __DIR__ . '/partials/header.php';
                                 <!-- Support CTA List Start -->
                                 <div class="support-cta-list">
                                     <ul>
-                                        <li><span>Mon to Fri:</span>09:00 AM - 07:00 PM</li>
-                                        <li><span>Saturday:</span>09:00 AM - 07:00 PM</li>
-                                        <li><span>Sunday</span>Closed</li>
+                                        <?php foreach ($support['hours'] as $hour): ?>
+                                            <li><span><?php echo htmlspecialchars($hour['day']); ?></span><?php echo htmlspecialchars($hour['time']); ?></li>
+                                        <?php endforeach; ?>
                                     </ul>
                                 </div>
                                 <!-- Support CTA List End -->
 
                                 <!-- Support CTA Button Start -->
                                 <div class="support-cta-btn">
-                                    <a href="contact.php" class="btn-default">24/7 Services for Emergancy</a>
+                                    <a href="<?php echo $support['button_link']; ?>" class="btn-default"><?php echo htmlspecialchars($support['button_text']); ?></a>
                                 </div>
                                 <!-- Support CTA Button End -->
                             </div>
@@ -930,7 +628,7 @@ include __DIR__ . '/partials/header.php';
                 <div class="col-lg-12">
                     <!-- Section Footer Text Start -->
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.6s">
-                        <p>Browse all professional healthcare services available for you and family</p>
+                        <p><?php echo htmlspecialchars($support['footer_text']); ?></p>
                         <ul>
                             <li class="section-footer-content">Trusted By <b><?php echo $siteData['trusted_patients']; ?>+</b> Patients</li>
                             <li>
@@ -959,14 +657,14 @@ include __DIR__ . '/partials/header.php';
                     <div class="our-appointment-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <span class="section-sub-title wow fadeInUp">Book an Appointment</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Book your appointment for better health today</h2>
+                            <span class="section-sub-title wow fadeInUp"><?php echo htmlspecialchars($appointment['sub_title']); ?></span>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque"><?php echo htmlspecialchars($appointment['title']); ?></h2>
                         </div>
                         <!-- Section Title End -->
 
                         <!-- Google Map Start -->
                         <div class="google-map-iframe wow fadeInUp" data-wow-delay="0.2s">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.0570252161824!2d82.0031904!3d25.933352299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a96d6934d2b89%3A0x4e4992d1d0000000!2sSai%20Manthan%20Hospital!5e0!3m2!1sen!2sin!4v1788960718442!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                            <iframe src="<?php echo $siteData['map']; ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                         </div>
                         <!-- Google Map End -->
                     </div>
@@ -978,7 +676,7 @@ include __DIR__ . '/partials/header.php';
                     <div class="appointment-form">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Book an appointment</h2>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque"><?php echo htmlspecialchars($appointment['form_title']); ?></h2>
                         </div>
                         <!-- Section Title End -->
 
@@ -1021,7 +719,7 @@ include __DIR__ . '/partials/header.php';
                                 </div>
 
                                 <div class="col-md-12">
-                                    <button type="submit" class="btn-default btn-highlighted">Submit Message</button>
+                                    <button type="submit" class="btn-default btn-highlighted"><?php echo htmlspecialchars($appointment['button_text']); ?></button>
                                     <div id="msgSubmit" class="h3 hidden"></div>
                                 </div>
                             </div>

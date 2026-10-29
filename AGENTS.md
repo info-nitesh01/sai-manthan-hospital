@@ -1,36 +1,24 @@
 # AGENTS.md
 
-## Project overview
-This repository is a static marketing website for a healthcare/medical brand called Pluxes. It is composed of standalone HTML pages in the project root, shared CSS in `css/`, shared JavaScript in `js/`, and static assets in `images/`.
+## Stack
+Static PHP marketing site for Sai Manthan Hospital (Pratapgarh). No `package.json`, no build step, no test runner, no framework. Pages are `.php` in the project root, served through XAMPP/Apache. Edit in place and verify by opening the page in a browser; there is nothing to compile or lint.
 
-## Working conventions
-- Keep edits consistent with the existing template structure: each page is a full HTML document with shared header/footer patterns and page-specific sections.
-- Prefer updating shared styling in `css/custom.css` instead of rewriting page-specific inline styles.
-- Prefer updating shared behavior in `js/function.js` instead of adding ad hoc logic in individual pages.
-- Preserve existing class names, IDs, and asset paths unless the task explicitly requires a redesign.
-- Do not modify vendor library files under `js/*.min.js` unless absolutely necessary; use the wrapper logic in `js/function.js` to configure behavior.
-- Keep relative links working from the project root. Most pages use paths such as `index.html`, `about.html`, `services.html`, `contact.html`, etc.
+## Page structure (high-signal)
+- Every root `.php` page is a full document: it sets `$pageTitle`, then includes `partials/head.php`, `partials/preloader.php`, `partials/header.php`, and (near the end) `partials/footer.php`. Set `$pageTitle` **before** the includes (`index.php:2`).
+- `partials/head.php` loads `data/site-common-data.php` into `$siteData` (ratings, review counts, department list). Use `$siteData['key']` for counters/stats instead of hardcoding numbers.
+- Internal links use root-relative `.php` paths: `about.php`, `contact.php`, `services.php`, `book-appointment.php`, `team.php`, `404.php`. Do not use `.html` for root pages.
+- `.htaccess` maps 404s to `/pluxes/404.php`; the site runs under a `/pluxes/` subdirectory on the server.
 
-## Typical implementation workflow
-1. Identify the page to change from the root HTML files.
-2. Match the existing section structure and Bootstrap layout before editing.
-3. Add or adjust CSS in `css/custom.css` when new styles are required.
-4. Add or adjust initialization logic in `js/function.js` for animations, sliders, counters, and menu behavior.
-5. Re-check the page in a browser to confirm the layout and interactions still work.
+## Where to put changes
+- Shared styling: `css/custom.css`. Do not edit vendor files (`css/*.min.css`, `css/all.min.css`, `css/bootstrap.min.css`, etc.).
+- Shared behavior: `js/function.js`. Do not edit vendor files (`js/*.min.js`, `js/jquery-3.7.1.min.js`, etc.). Configure sliders/counters/animations in `function.js`, not inline in pages.
+- Page content: edit the matching root `.php` file.
+- Site-wide copy/stats: `data/site-common-data.php`.
+- Shared section data used on multiple pages: `data/common-about.php` (About Us section), `data/common-facts.php` (Fact/Statistics), `data/common-why-choose-us.php` (Why Choose Us), `data/common-team.php` (Our Team section on both `index.php` and `team.php`; `members_detail` used by `team-single.php?name=<name>`).
+- Homepage-only section data: `data/home-*.php` (hero, services, why-choose-us, core-features, team, testimonials, support, appointment). `index.php` loads each into a variable and renders the section dynamically.
+
+## Archives — do not treat as live
+- `html-files/*.html` and `Version/index.html` are template/archive copies, not served pages. Changes there have no effect on the site.
 
 ## Validation
-There is no package.json, build pipeline, or automated test suite in this project. Validation is manual:
-- open the affected HTML page in a browser or local preview;
-- verify links, styles, and JS interactions render without console errors;
-- confirm any moved assets still resolve under the same directory structure.
-
-## Content and design expectations
-- Maintain the medical/healthcare branding and tone already used by the template.
-- Keep the design consistent with the existing hero sections, cards, reviews, service blocks, and call-to-action patterns.
-- For new pages, mirror the established page structure and reuse the same CSS classes/sections where possible.
-
-## Useful files
-- `index.html`: landing page reference implementation and general layout patterns
-- `css/custom.css`: primary site styling
-- `js/function.js`: shared interactive behavior and animation setup
-- `images/`: static media assets
+Manual only: open the affected page in a browser (XAMPP `http://localhost/pluxes/...`), check links, styles, JS interactions, and console errors. Confirm asset paths resolve from the project root (`images/...`, `css/...`, `js/...`).

@@ -17,5 +17,11 @@ return [
     'emergency_hours' => '24',
     'experienced_doctors' => '10',
     'medical_departments' => count($departments),
-    'medical_departments_list' => $departments
+    'medical_departments_list' => $departments,
+    'contact' => [
+        'emergency_phones' => ['05342-357140', '07860232525'],
+        'email' => 'ms.munna1976@gmail.com',
+        'address' => 'Allahabad - Faizabad Rd, opp. Honda Agency, Sadar Chauraha, Bela Pratapgarh, Uttar Pradesh 230403',
+    ],
+    'map' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.0570252161824!2d82.0031904!3d25.933352299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a96d6934d2b89%3A0x4e4992d1d0000000!2sSai%20Manthan%20Hospital!5e0!3m2!1sen!2sin!4v1788960718442!5m2!1sen!2sin',
 ];
