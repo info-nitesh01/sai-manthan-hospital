@@ -1,46 +1,50 @@
-﻿
-<?php
+﻿<?php
 $pageTitle = 'Services';
 include __DIR__ . '/partials/head.php';
 include __DIR__ . '/partials/preloader.php';
 include __DIR__ . '/partials/header.php';
 ?>
-    <!-- Page Header Section Start -->
-    <div class="page-header dark-section parallaxie">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Page Header Box Start -->
-                    <div class="page-header-box">
-                        <h1 class="text-anime-style-3" data-cursor="-opaque">Our services</h1>
-                        <nav class="wow fadeInUp" >
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.php">home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">services</li>
-                            </ol>
-                        </nav>
-                    </div>
-                    <!-- Page Header Box End -->
+<!-- Page Header Section Start -->
+<div class="page-header dark-section parallaxie">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Page Header Box Start -->
+                <div class="page-header-box">
+                    <h1 class="text-anime-style-3" data-cursor="-opaque">Our services</h1>
+                    <nav class="wow fadeInUp">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.php">home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">services</li>
+                        </ol>
+                    </nav>
                 </div>
+                <!-- Page Header Box End -->
             </div>
         </div>
     </div>
-    <!-- Page Header Section End -->
+</div>
+<!-- Page Header Section End -->
 
-    <!-- Page Service Section Start -->
-    <div class="page-service">
-        <div class="container">
-            <div class="row">
+<!-- Page Service Section Start -->
+<div class="page-service">
+    <div class="container">
+        <div class="row">
+            <?php $i = 0;
+            foreach ($siteData['medical_departments_list'] as $dept):
+                $i++; ?>
                 <div class="col-xl-3 col-md-6">
                     <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp">
+                    <div class="service-item wow fadeInUp" data-wow-delay="<?php echo 0.2 * (($i - 1) % 4); ?>s">
                         <div class="icon-box">
-                            <img src="images/icons/icon-service-item-1.svg" alt="">
+                            <img src="images/icons/<?php echo htmlspecialchars($dept['icon'], ENT_QUOTES, 'UTF-8'); ?>" alt="">
                         </div>
                         <div class="service-item-body">
                             <div class="service-item-content">
-                                <h2><a href="services.php">Pediatric Care</a></h2>
-                                <p>Our pediatric care focus on the health and well-being of infants, children.</p>
+                                <h2><a
+                                        href="services.php"><?php echo htmlspecialchars($dept['name'], ENT_QUOTES, 'UTF-8'); ?></a>
+                                </h2>
+                                <p><?php echo htmlspecialchars($dept['description'], ENT_QUOTES, 'UTF-8'); ?></p>
                             </div>
                             <div class="service-item-btn">
                                 <a href="services.php" class="readmore-btn">View Details</a>
@@ -49,344 +53,217 @@ include __DIR__ . '/partials/header.php';
                     </div>
                     <!-- Service Item End -->
                 </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</div>
+<!-- Page Service Section End -->
 
-                <div class="col-xl-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="icon-box">
-                            <img src="images/icons/icon-service-item-2.svg" alt="">
+<!-- Our Fact Section Start -->
+<div class="our-facts bg-section dark-section">
+    <div class="container">
+        <div class="row section-row">
+            <div class="col-lg-12">
+                <!-- Section Title Start -->
+                <div class="section-title section-title-center">
+                    <span class="section-sub-title wow fadeInUp">Fact / Statistics</span>
+                    <h2 class="text-anime-style-3" data-cursor="-opaque">Key statistics that reflect our medical
+                        excellence</h2>
+                </div>
+                <!-- Section Title End -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-4 col-md-6">
+                <!-- Fact Item Start -->
+                <div class="fact-item wow fadeInUp">
+                    <div class="fact-item-header">
+                        <div class="fact-item-counter-content">
+                            <h2><span class="counter"><?php echo $siteData['experienced_doctors']; ?></span>+</h2>
+                            <ul>
+                                <li>Experienced Doctors</li>
+                            </ul>
                         </div>
-                        <div class="service-item-body">
-                            <div class="service-item-content">
-                                <h2><a href="services.php">Family Medicine</a></h2>
-                                <p>Our pediatric care focus on the health and well-being of infants, children.</p>
-                            </div>
-                            <div class="service-item-btn">
-                                <a href="services.php" class="readmore-btn">View Details</a>
-                            </div>
+                        <div class="icon-box">
+                            <img src="images/icons/icon-fact-item-1.svg" alt="">
                         </div>
                     </div>
-                    <!-- Service Item End -->
+                    <div class="fact-item-content">
+                        <p>Our team of experienced doctor dedicated to providing expert medical care with.</p>
+                    </div>
                 </div>
+                <!-- Fact Item End -->
+            </div>
 
-                <div class="col-xl-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="icon-box">
-                            <img src="images/icons/icon-service-item-3.svg" alt="">
+            <div class="col-xl-4 col-md-6">
+                <!-- Fact Item Start -->
+                <div class="fact-item wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="fact-item-header">
+                        <div class="fact-item-counter-content">
+                            <h2><span class="counter"><?php echo $siteData['medical_departments']; ?></span>+</h2>
+                            <ul>
+                                <li>Medical Departments</li>
+                            </ul>
                         </div>
-                        <div class="service-item-body">
-                            <div class="service-item-content">
-                                <h2><a href="services.php">Preventive Healthcare</a></h2>
-                                <p>Our pediatric care focus on the health and well-being of infants, children.</p>
-                            </div>
-                            <div class="service-item-btn">
-                                <a href="services.php" class="readmore-btn">View Details</a>
-                            </div>
+                        <div class="icon-box">
+                            <img src="images/icons/icon-fact-item-2.svg" alt="">
                         </div>
                     </div>
-                    <!-- Service Item End -->
+                    <div class="fact-item-content">
+                        <p>Our team of experienced doctor dedicated to providing expert medical care with.</p>
+                    </div>
                 </div>
+                <!-- Fact Item End -->
+            </div>
 
-                <div class="col-xl-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="icon-box">
-                            <img src="images/icons/icon-service-item-4.svg" alt="">
+            <div class="col-xl-4 col-md-6">
+                <!-- Fact Item Start -->
+                <div class="fact-item wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="fact-item-header">
+                        <div class="fact-item-counter-content">
+                            <h2><span class="counter"><?php echo $siteData['emergency_hours']; ?></span>/7</h2>
+                            <ul>
+                                <li>Emergency Support</li>
+                            </ul>
                         </div>
-                        <div class="service-item-body">
-                            <div class="service-item-content">
-                                <h2><a href="services.php">Gynecology</a></h2>
-                                <p>Compassionate women's health care from checkups to treatment.</p>
-                            </div>
-                            <div class="service-item-btn">
-                                <a href="services.php" class="readmore-btn">View Details</a>
-                            </div>
+                        <div class="icon-box">
+                            <img src="images/icons/icon-fact-item-3.svg" alt="">
                         </div>
                     </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-xl-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="icon-box">
-                            <img src="images/icons/icon-service-item-5.svg" alt="">
-                        </div>
-                        <div class="service-item-body">
-                            <div class="service-item-content">
-                                <h2><a href="services.php">Cardiology</a></h2>
-                                <p>Personalized heart care through evaluation, prevention, and treatment.</p>
-                            </div>
-                            <div class="service-item-btn">
-                                <a href="services.php" class="readmore-btn">View Details</a>
-                            </div>
-                        </div>
+                    <div class="fact-item-content">
+                        <p>Our team of experienced doctor dedicated to providing expert medical care with.</p>
                     </div>
-                    <!-- Service Item End -->
                 </div>
+                <!-- Fact Item End -->
+            </div>
 
-                <div class="col-xl-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="1s">
-                        <div class="icon-box">
-                            <img src="images/icons/icon-service-item-6.svg" alt="">
-                        </div>
-                        <div class="service-item-body">
-                            <div class="service-item-content">
-                                <h2><a href="services.php">Diagnostic Imaging</a></h2>
-                                <p>Our pediatric care focus on the health and well-being of infants, children.</p>
-                            </div>
-                            <div class="service-item-btn">
-                                <a href="services.php" class="readmore-btn">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Service Item End -->
+            <div class="col-lg-12">
+                <!-- Section Footer Text Start -->
+                <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
+                    <p>Browse all professional healthcare services available for you and family</p>
+                    <ul>
+                        <li class="section-footer-content">Trusted By
+                            <b><?php echo $siteData['trusted_patients']; ?>+</b> Patients</li>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </li>
+                        <li><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5</li>
+                    </ul>
                 </div>
-
-                <div class="col-xl-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="1.2s">
-                        <div class="icon-box">
-                            <img src="images/icons/icon-service-item-7.svg" alt="">
-                        </div>
-                        <div class="service-item-body">
-                            <div class="service-item-content">
-                                <h2><a href="services.php">Laboratory Testing</a></h2>
-                                <p>Our pediatric care focus on the health and well-being of infants, children.</p>
-                            </div>
-                            <div class="service-item-btn">
-                                <a href="services.php" class="readmore-btn">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-xl-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="1.4s">
-                        <div class="icon-box">
-                            <img src="images/icons/icon-service-item-8.svg" alt="">
-                        </div>
-                        <div class="service-item-body">
-                            <div class="service-item-content">
-                                <h2><a href="services.php">Mental Health Support</a></h2>
-                                <p>Our pediatric care focus on the health and well-being of infants, children.</p>
-                            </div>
-                            <div class="service-item-btn">
-                                <a href="services.php" class="readmore-btn">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Service Item End -->
-                </div>
+                <!-- Section Footer Text End -->
             </div>
         </div>
     </div>
-    <!-- Page Service Section End -->
+</div>
+<!-- Our Fact Section End -->
 
-    <!-- Our Fact Section Start -->
-    <div class="our-facts bg-section dark-section">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
+<!-- Why Choose Us Section Start -->
+<div class="why-choose-us">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6">
+                <!-- Why Choose Us Content Start -->
+                <div class="why-choose-us-content">
                     <!-- Section Title Start -->
-                    <div class="section-title section-title-center">
-                        <span class="section-sub-title wow fadeInUp">Fact / Statistics</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Key statistics that reflect our medical excellence</h2>
+                    <div class="section-title">
+                        <span class="section-sub-title wow fadeInUp">Why Choose Us</span>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">Why choose us for quality healthcare
+                            services</h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">Our experienced medical team focuses on accurate
+                            diagnosis, effective treatment, and personalized care to ensure the best outcomes for every
+                            patient.</p>
                     </div>
                     <!-- Section Title End -->
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-xl-4 col-md-6">
-                    <!-- Fact Item Start -->
-                    <div class="fact-item wow fadeInUp">
-                        <div class="fact-item-header">
-                            <div class="fact-item-counter-content">
-                                <h2><span class="counter"><?php echo $siteData['experienced_doctors']; ?></span>+</h2>
-                                <ul>
-                                    <li>Experienced Doctors</li>
-                                </ul>
-                            </div>
-                            <div class="icon-box">
-                                <img src="images/icons/icon-fact-item-1.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="fact-item-content">
-                            <p>Our team of experienced doctor dedicated to providing expert medical care with.</p>
-                        </div>
-                    </div>
-                    <!-- Fact Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Fact Item Start -->
-                    <div class="fact-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="fact-item-header">
-                            <div class="fact-item-counter-content">
-                                <h2><span class="counter"><?php echo $siteData['medical_departments']; ?></span>+</h2>
-                                <ul>
-                                    <li>Medical Departments</li>
-                                </ul>
-                            </div>
-                            <div class="icon-box">
-                                <img src="images/icons/icon-fact-item-2.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="fact-item-content">
-                            <p>Our team of experienced doctor dedicated to providing expert medical care with.</p>
-                        </div>
-                    </div>
-                    <!-- Fact Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Fact Item Start -->
-                    <div class="fact-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="fact-item-header">
-                            <div class="fact-item-counter-content">
-                                <h2><span class="counter"><?php echo $siteData['emergency_hours']; ?></span>/7</h2>
-                                <ul>
-                                    <li>Emergency Support</li>
-                                </ul>
-                            </div>
-                            <div class="icon-box">
-                                <img src="images/icons/icon-fact-item-3.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="fact-item-content">
-                            <p>Our team of experienced doctor dedicated to providing expert medical care with.</p>
-                        </div>
-                    </div>
-                    <!-- Fact Item End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Section Footer Text Start -->
-                    <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
-                        <p>Browse all professional healthcare services available for you and family</p>
-                        <ul>
-                            <li class="section-footer-content">Trusted By <b><?php echo $siteData['trusted_patients']; ?>+</b> Patients</li>
-                            <li>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </li>
-                            <li><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5</li>
-                        </ul>
-                    </div>
-                    <!-- Section Footer Text End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Fact Section End -->
-
-    <!-- Why Choose Us Section Start -->
-    <div class="why-choose-us">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6">
-                    <!-- Why Choose Us Content Start -->
-                    <div class="why-choose-us-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <span class="section-sub-title wow fadeInUp">Why Choose Us</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Why choose us for quality healthcare services</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Our experienced medical team focuses on accurate diagnosis, effective treatment, and personalized care to ensure the best outcomes for every patient.</p>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Why Choose Us Body Start -->
-                        <div class="why-choose-us-body">
-                            <!-- Why Choose Counter Box Start -->
-                            <div class="why-choose-counter-box wow fadeInUp" data-wow-delay="0.4s">
-                                <!-- Why choose Counter Item List Start -->
-                                <div class="why-choose-counter-item-list">
-                                    <!-- Why choose Counter Item Start -->
-                                    <div class="why-choose-counter-item">
-                                        <h2><span class="counter"><?php echo $siteData['experience_years']; ?></span>+</h2>
-                                        <p>Years Experience</p>
-                                    </div>
-                                    <!-- Why choose Counter Item End -->
-
-                                    <!-- Why choose Counter Item Start -->
-                                    <div class="why-choose-counter-item">
-                                        <h2><span class="counter"><?php echo $siteData['emergency_hours']; ?></span>/7</h2>
-                                        <p>Emergency Support</p>
-                                    </div>
-                                    <!-- Why choose Counter Item End -->
+                    <!-- Why Choose Us Body Start -->
+                    <div class="why-choose-us-body">
+                        <!-- Why Choose Counter Box Start -->
+                        <div class="why-choose-counter-box wow fadeInUp" data-wow-delay="0.4s">
+                            <!-- Why choose Counter Item List Start -->
+                            <div class="why-choose-counter-item-list">
+                                <!-- Why choose Counter Item Start -->
+                                <div class="why-choose-counter-item">
+                                    <h2><span class="counter"><?php echo $siteData['experience_years']; ?></span>+</h2>
+                                    <p>Years Experience</p>
                                 </div>
-                                <!-- Why Choose Counter Item List End -->
+                                <!-- Why choose Counter Item End -->
 
-                                <!-- Why Choose Counter Image Start -->
-                                <div class="why-choose-counter-image">
-                                    <figure class="image-anime">
-                                        <img src="images/services/why-choose-counter-image.jpg" alt="">
-                                    </figure>
+                                <!-- Why choose Counter Item Start -->
+                                <div class="why-choose-counter-item">
+                                    <h2><span class="counter"><?php echo $siteData['emergency_hours']; ?></span>/7</h2>
+                                    <p>Emergency Support</p>
                                 </div>
-                                <!-- Why Choose Counter Image End -->
+                                <!-- Why choose Counter Item End -->
                             </div>
-                            <!-- Why Choose Counter Box End -->
+                            <!-- Why Choose Counter Item List End -->
 
-                            <!-- Why Choose Body Image Start -->
-                            <div class="why-choose-body-image">
-                                <figure class="image-anime reveal">
-                                    <img src="images/misc/why-choose-body-image.jpg" alt="">
+                            <!-- Why Choose Counter Image Start -->
+                            <div class="why-choose-counter-image">
+                                <figure class="image-anime">
+                                    <img src="images/services/why-choose-counter-image.jpg" alt="">
                                 </figure>
                             </div>
-                            <!-- Why Choose Body Image End -->
-                        </div>
-                        <!-- Why Choose Us Body End -->
-                    </div>
-                    <!-- Why Choose Us Content End -->
-                </div>
-
-                <div class="col-xl-6">
-                    <!-- Why choose Us Image Box Start -->
-                    <div class="why-choose-us-image-box wow fadeInUp">
-                        <!-- Why Choose Experience Circle Start -->
-                        <div class="years-experience-circle">
-                            <figure>
-                                <img src="images/brand/years-experience-circle-white.svg" alt="">
-                            </figure>
-                        </div>
-                        <!-- Why Choose Experience Circle End -->
-
-                        <!-- Why Choose Us Image Start -->
-                        <div class="why-choose-us-image">
-                            <figure>
-                                <img src="images/services/why-choose-us-image.png" alt="">
-                            </figure>
-                        </div>
-                        <!-- Why Choose Us Image End -->
-
-                        <!-- Why Choose Cta Box Start -->
-                        <div class="why-choose-cta-box">
-                            <div class="icon-box">
-                                <img src="images/icons/icon-why-choose-cta-box.svg" alt="">
-                            </div>
-                            <div class="why-choose-cta-content">
-                                <h2><span class="counter"><?php echo $siteData['medical_departments']; ?></span>+</h2>
-                                <p>Medical Departments</p>
-                            </div>
+                            <!-- Why Choose Counter Image End -->
                         </div>
                         <!-- Why Choose Counter Box End -->
+
+                        <!-- Why Choose Body Image Start -->
+                        <div class="why-choose-body-image">
+                            <figure class="image-anime reveal">
+                                <img src="images/misc/why-choose-body-image.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- Why Choose Body Image End -->
                     </div>
-                    <!-- Why choose Us Image Box End -->
+                    <!-- Why Choose Us Body End -->
                 </div>
+                <!-- Why Choose Us Content End -->
+            </div>
+
+            <div class="col-xl-6">
+                <!-- Why choose Us Image Box Start -->
+                <div class="why-choose-us-image-box wow fadeInUp">
+                    <!-- Why Choose Experience Circle Start -->
+                    <div class="years-experience-circle">
+                        <figure>
+                            <img src="images/brand/years-experience-circle-white.svg" alt="">
+                        </figure>
+                    </div>
+                    <!-- Why Choose Experience Circle End -->
+
+                    <!-- Why Choose Us Image Start -->
+                    <div class="why-choose-us-image">
+                        <figure>
+                            <img src="images/services/why-choose-us-image.png" alt="">
+                        </figure>
+                    </div>
+                    <!-- Why Choose Us Image End -->
+
+                    <!-- Why Choose Cta Box Start -->
+                    <div class="why-choose-cta-box">
+                        <div class="icon-box">
+                            <img src="images/icons/icon-why-choose-cta-box.svg" alt="">
+                        </div>
+                        <div class="why-choose-cta-content">
+                            <h2><span class="counter"><?php echo $siteData['medical_departments']; ?></span>+</h2>
+                            <p>Medical Departments</p>
+                        </div>
+                    </div>
+                    <!-- Why Choose Counter Box End -->
+                </div>
+                <!-- Why choose Us Image Box End -->
             </div>
         </div>
     </div>
-    <!-- Why Choose Us Section End -->
+</div>
+<!-- Why Choose Us Section End -->
 
-    <?php if (false): ?>
+<?php if (false): ?>
     <!-- Our Approach Section Start -->
     <div class="our-approach bg-section">
         <div class="container">
@@ -395,7 +272,8 @@ include __DIR__ . '/partials/header.php';
                     <!-- Section Title Start -->
                     <div class="section-title section-title-center">
                         <span class="section-sub-title">Our Approach</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Our patient first approach to quality healthcare</h2>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">Our patient first approach to quality
+                            healthcare</h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -429,16 +307,18 @@ include __DIR__ . '/partials/header.php';
 
                             <!-- Hero Client Content Start -->
                             <div class="hero-client-content">
-                                <h2><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5<i class="fa fa-solid fa-star"></i></h2>
+                                <h2><span class="counter"><?php echo $siteData['home_rating']; ?></span>/5<i
+                                        class="fa fa-solid fa-star"></i></h2>
                                 <p>More Than <?php echo $siteData['home_reviews']; ?> Reviews</p>
                             </div>
                             <!-- Hero Client Content End -->
                         </div>
                         <!-- Hero Client Box End -->
-                        
+
                         <div class="approach-cta-body">
                             <div class="approach-cta-content">
-                                <p>We prioritize comfort, trust, and treatment to ensure the best possible health outcomes for every patient.</p>
+                                <p>We prioritize comfort, trust, and treatment to ensure the best possible health outcomes
+                                    for every patient.</p>
                             </div>
                             <div class="approach-cta-btn">
                                 <a href="contact.php" class="btn-default">24/7 Services for Emergancy</a>
@@ -456,7 +336,8 @@ include __DIR__ . '/partials/header.php';
                         </div>
                         <div class="approach-item-content">
                             <h3>Your Health Our Priority</h3>
-                            <p>Your health is at the heart of everything we do. We are committed to high-quality care tailored to your journey.</p>
+                            <p>Your health is at the heart of everything we do. We are committed to high-quality care
+                                tailored to your journey.</p>
                         </div>
                     </div>
                     <!-- Approach Item End -->
@@ -470,7 +351,8 @@ include __DIR__ . '/partials/header.php';
                         </div>
                         <div class="approach-item-content">
                             <h3>Vision For Better Healthcare</h3>
-                            <p>Your health is at the heart of everything we do. We are committed to high-quality care tailored to your journey.</p>
+                            <p>Your health is at the heart of everything we do. We are committed to high-quality care
+                                tailored to your journey.</p>
                         </div>
                     </div>
                     <!-- Approach Item End -->
@@ -481,7 +363,8 @@ include __DIR__ . '/partials/header.php';
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
                         <p>Browse all professional healthcare services available for you and family</p>
                         <ul>
-                            <li class="section-footer-content">Trusted By <b><?php echo $siteData['trusted_patients']; ?>+</b> Patients</li>
+                            <li class="section-footer-content">Trusted By
+                                <b><?php echo $siteData['trusted_patients']; ?>+</b> Patients</li>
                             <li class="section-footer-rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -498,9 +381,9 @@ include __DIR__ . '/partials/header.php';
         </div>
     </div>
     <!-- Our Approach Section End -->
-    <?php endif; ?>
+<?php endif; ?>
 
-    <?php if (false): ?>
+<?php if (false): ?>
     <!-- Our Expertise Start -->
     <div class="our-expertise">
         <div class="container">
@@ -542,8 +425,11 @@ include __DIR__ . '/partials/header.php';
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <span class="section-sub-title wow fadeInUp">Medical Expertise</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Experience and expertise you can trust always</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">With years of hands-on experience and deep medical expertise, we provide care you can trust at every step our skilled professionals are committed.</p>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Experience and expertise you can trust
+                                always</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">With years of hands-on experience and deep medical
+                                expertise, we provide care you can trust at every step our skilled professionals are
+                                committed.</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -602,9 +488,9 @@ include __DIR__ . '/partials/header.php';
         </div>
     </div>
     <!-- Our Expertise Section End -->
-    <?php endif; ?>
+<?php endif; ?>
 
-    <?php if (false): ?>
+<?php if (false): ?>
     <!-- Our Testimonial Section Start -->
     <div class="our-testimonial bg-section">
         <div class="container">
@@ -614,7 +500,9 @@ include __DIR__ . '/partials/header.php';
                     <div class="section-title section-title-center">
                         <span class="section-sub-title wow fadeInUp">Patients Testimonials</span>
                         <h2 class="text-anime-style-3" data-cursor="-opaque">What our patients are saying</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">Hear from our patients about their experiences with our dedicated medical team and quality healthcare services their feedback reflects our commitment.</p>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">Hear from our patients about their experiences with
+                            our dedicated medical team and quality healthcare services their feedback reflects our
+                            commitment.</p>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -635,7 +523,8 @@ include __DIR__ . '/partials/header.php';
                                                 <img src="images/brand/testimonial-quote.svg" alt="">
                                             </div>
                                             <div class="testimonial-item-content">
-                                                <p>“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”</p>
+                                                <p>“The doctors and staff were incredibly supportive throughout my
+                                                    treatment. Their expertise and care helped me recover expected.”</p>
                                             </div>
                                         </div>
                                         <div class="testimonial-item-author">
@@ -663,7 +552,8 @@ include __DIR__ . '/partials/header.php';
                                                 <img src="images/brand/testimonial-quote.svg" alt="">
                                             </div>
                                             <div class="testimonial-item-content">
-                                                <p>“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”</p>
+                                                <p>“The doctors and staff were incredibly supportive throughout my
+                                                    treatment. Their expertise and care helped me recover expected.”</p>
                                             </div>
                                         </div>
                                         <div class="testimonial-item-author">
@@ -691,7 +581,8 @@ include __DIR__ . '/partials/header.php';
                                                 <img src="images/brand/testimonial-quote.svg" alt="">
                                             </div>
                                             <div class="testimonial-item-content">
-                                                <p>“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”</p>
+                                                <p>“The doctors and staff were incredibly supportive throughout my
+                                                    treatment. Their expertise and care helped me recover expected.”</p>
                                             </div>
                                         </div>
                                         <div class="testimonial-item-author">
@@ -719,7 +610,8 @@ include __DIR__ . '/partials/header.php';
                                                 <img src="images/brand/testimonial-quote.svg" alt="">
                                             </div>
                                             <div class="testimonial-item-content">
-                                                <p>“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”</p>
+                                                <p>“The doctors and staff were incredibly supportive throughout my
+                                                    treatment. Their expertise and care helped me recover expected.”</p>
                                             </div>
                                         </div>
                                         <div class="testimonial-item-author">
@@ -757,8 +649,9 @@ include __DIR__ . '/partials/header.php';
                                 <img src="images/icons/icon-phone-white.svg" alt="">
                             </div>
                         </div>
-                        <!-- Satisfy Client Images End -->    
-                        <p>Helping You Move from Concern to Confidence with Expert Medical Care. -<a href="contact.php">View our All reviews</a></p>
+                        <!-- Satisfy Client Images End -->
+                        <p>Helping You Move from Concern to Confidence with Expert Medical Care. -<a href="contact.php">View
+                                our All reviews</a></p>
                     </div>
                     <!-- Section Footer Text End -->
                 </div>
@@ -766,9 +659,9 @@ include __DIR__ . '/partials/header.php';
         </div>
     </div>
     <!-- Our Testimonial Section End -->
-    <?php endif; ?>
+<?php endif; ?>
 
-    <?php if (false): ?>
+<?php if (false): ?>
     <!-- Our FAQs Section Start -->
     <div class="our-faqs">
         <div class="container">
@@ -789,7 +682,9 @@ include __DIR__ . '/partials/header.php';
                             <!-- FAQ CTA Content Start -->
                             <div class="faq-cta-content wow fadeInUp">
                                 <h3>Have a any Questions !</h3>
-                                <p>If you have any questions about our medical services, appointments, or treatments, our team is here to help. We are committed to providing clear information and friendly support to ensure you receive the care and guidance you need.</p>
+                                <p>If you have any questions about our medical services, appointments, or treatments, our
+                                    team is here to help. We are committed to providing clear information and friendly
+                                    support to ensure you receive the care and guidance you need.</p>
                             </div>
                             <!-- FAQ CTA Content End -->
 
@@ -808,7 +703,8 @@ include __DIR__ . '/partials/header.php';
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <span class="section-sub-title wow fadeInUp">Frequently Asked Questions</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Your questions answered about our medical services</h2>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">Your questions answered about our medical
+                            services</h2>
                     </div>
                     <!-- Section Title End -->
 
@@ -817,13 +713,16 @@ include __DIR__ . '/partials/header.php';
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp">
                             <h2 class="accordion-header" id="heading1">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
                                     1. How can I book an appointment with a doctor?
                                 </button>
                             </h2>
-                            <div id="collapse1" class="accordion-collapse collapse" role="region" aria-labelledby="heading1" data-bs-parent="#accordion">
+                            <div id="collapse1" class="accordion-collapse collapse" role="region" aria-labelledby="heading1"
+                                data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
+                                    <p>We provide a wide range of services including general checkups, cardiology,
+                                        pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
                                 </div>
                             </div>
                         </div>
@@ -832,13 +731,16 @@ include __DIR__ . '/partials/header.php';
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
                             <h2 class="accordion-header" id="heading2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                                     2. Do you provide emergency medical services?
                                 </button>
                             </h2>
-                            <div id="collapse2" class="accordion-collapse collapse" role="region" aria-labelledby="heading2" data-bs-parent="#accordion">
+                            <div id="collapse2" class="accordion-collapse collapse" role="region" aria-labelledby="heading2"
+                                data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
+                                    <p>We provide a wide range of services including general checkups, cardiology,
+                                        pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
                                 </div>
                             </div>
                         </div>
@@ -847,13 +749,16 @@ include __DIR__ . '/partials/header.php';
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
                             <h2 class="accordion-header" id="heading3">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
                                     3. What medical services do you provide?
                                 </button>
                             </h2>
-                            <div id="collapse3" class="accordion-collapse collapse show" role="region" aria-labelledby="heading3" data-bs-parent="#accordion">
+                            <div id="collapse3" class="accordion-collapse collapse show" role="region"
+                                aria-labelledby="heading3" data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
+                                    <p>We provide a wide range of services including general checkups, cardiology,
+                                        pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
                                 </div>
                             </div>
                         </div>
@@ -862,13 +767,16 @@ include __DIR__ . '/partials/header.php';
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
                             <h2 class="accordion-header" id="heading4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
                                     4. How early should I arrive for my appointment?
                                 </button>
                             </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" role="region" aria-labelledby="heading4" data-bs-parent="#accordion">
+                            <div id="collapse4" class="accordion-collapse collapse" role="region" aria-labelledby="heading4"
+                                data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
+                                    <p>We provide a wide range of services including general checkups, cardiology,
+                                        pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
                                 </div>
                             </div>
                         </div>
@@ -877,13 +785,16 @@ include __DIR__ . '/partials/header.php';
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
                             <h2 class="accordion-header" id="heading5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
                                     5. What should I bring to my medical appointment?
                                 </button>
                             </h2>
-                            <div id="collapse5" class="accordion-collapse collapse" role="region" aria-labelledby="heading5" data-bs-parent="#accordion">
+                            <div id="collapse5" class="accordion-collapse collapse" role="region" aria-labelledby="heading5"
+                                data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
+                                    <p>We provide a wide range of services including general checkups, cardiology,
+                                        pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
                                 </div>
                             </div>
                         </div>
@@ -895,6 +806,5 @@ include __DIR__ . '/partials/header.php';
         </div>
     </div>
     <!-- Our FAQs Section End -->
-    <?php endif; ?>
+<?php endif; ?>
 <?php include __DIR__ . '/partials/footer.php'; ?>
-
